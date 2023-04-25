@@ -5,9 +5,14 @@ export default function Home() {
   const lang = useRecoilValue(languageAtom)
   const text = useRecoilValue(textAtom)
 
-  return <div css={homeStyle}>{text[lang].home.title}</div>
+  return (
+    <div css={homeStyle} className='bg-home'>
+      {text[lang].home.title}
+    </div>
+  )
 }
 
 const homeStyle = {
-  minHeight: '200vh',
+  minHeight: '110vh',
+  paddingTop: '50px',
 }

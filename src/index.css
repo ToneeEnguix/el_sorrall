@@ -2,4 +2,24 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+
+/* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+
+.pointer {
+  cursor: pointer;
+}
+
+.bg-catalan { background-image: url(./assets/catalonia.png) }
+.bg-spanish { background-image: url(./assets/spain.png) }
+.bg-english { background-image: url(./assets/united-kingdom.png) }
+.bg-french { background-image: url(./assets/france.png) }
+
+.bg-home { background-image: url(./assets/portada.png)}
