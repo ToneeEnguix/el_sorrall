@@ -1,0 +1,7 @@
+TODOS:
+- add outline to logo
+- add outline to languages
+ELISA:
+- logo bad quality
+
+DONE:

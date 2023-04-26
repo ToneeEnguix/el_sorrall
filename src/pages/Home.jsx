@@ -7,12 +7,25 @@ export default function Home() {
 
   return (
     <div css={homeStyle} className='bg-home'>
-      {text[lang].home.title}
+      <h1 className='pirata'>Restaurant</h1>
+      <h1 className='pirata'>El Sorrall</h1>
+      {/* {text[lang].home.title} */}
     </div>
   )
 }
 
 const homeStyle = {
   minHeight: '110vh',
-  paddingTop: '50px',
+  paddingTop: '145px',
+  backgroundPosition: 'center',
+  backgroundSize: 'cover',
+  display: 'flex',
+  flexDirection: 'column',
+  padding: '10rem 11rem 0',
+  h1: {
+    color: '#FEF8E7',
+    fontSize: '9rem',
+    margin: 0,
+    letterSpacing: '2px',
+  },
 }

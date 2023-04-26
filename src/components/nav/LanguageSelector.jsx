@@ -1,10 +1,10 @@
 import { useRecoilState } from 'recoil'
-import { languageAtom } from '../state/atoms'
+import { languageAtom } from '../../state/atoms'
 
-import CatalanFlag from '../assets/catalonia.png'
-import SpanishFlag from '../assets/spain.png'
-import EnglishFlag from '../assets/united-kingdom.png'
-import FrenchFlag from '../assets/france.png'
+import CatalanFlag from '../../assets/imgs/catalonia.png'
+import SpanishFlag from '../../assets/imgs/spain.png'
+import EnglishFlag from '../../assets/imgs/united-kingdom.png'
+import FrenchFlag from '../../assets/imgs/france.png'
 
 export default function LanguageSelector() {
   const [languageRecoil, setLanguageRecoil] = useRecoilState(languageAtom)
@@ -18,7 +18,9 @@ export default function LanguageSelector() {
             onClick={() => setLanguageRecoil(lang)}
             key={lang}
           >
-            <span>{languages[lang].txt}</span>
+            <span className={lang === languageRecoil ? 'active' : ''}>
+              {languages[lang].txt}
+            </span>
             <hr className={lang === languageRecoil ? `bg-${lang}` : ''}></hr>
           </div>
         )
@@ -29,14 +31,15 @@ export default function LanguageSelector() {
 
 const languages = {
   catalan: { icon: CatalanFlag, txt: 'CAT' },
-  spanish: { icon: SpanishFlag, txt: 'ESP' },
-  english: { icon: EnglishFlag, txt: 'ENG' },
+  english: { icon: EnglishFlag, txt: 'EN' },
+  spanish: { icon: SpanishFlag, txt: 'ES' },
   french: { icon: FrenchFlag, txt: 'FR' },
 }
 
 const selectorStyle = {
   display: 'flex',
   alignItems: 'center',
+  margin: '-.3rem 0 0 1rem',
   '.item': {
     marginLeft: '1rem',
     transition: 'all 200ms linear',
@@ -49,5 +52,8 @@ const selectorStyle = {
       border: 'none',
       backgroundSize: 'cover',
     },
+  },
+  '.active': {
+    color: '#050E80',
   },
 }

@@ -2,6 +2,8 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "DMSansRegular";
+  letter-spacing: '1px';
 
 /* Hide scrollbar for IE, Edge and Firefox */
   -ms-overflow-style: none;  /* IE and Edge */
@@ -17,9 +19,42 @@ body::-webkit-scrollbar {
   cursor: pointer;
 }
 
-.bg-catalan { background-image: url(./assets/catalonia.png) }
-.bg-spanish { background-image: url(./assets/spain.png) }
-.bg-english { background-image: url(./assets/united-kingdom.png) }
-.bg-french { background-image: url(./assets/france.png) }
 
-.bg-home { background-image: url(./assets/portada.png)}
+/* Imgs */
+.bg-catalan { background-image: url(./assets/imgs/catalonia.png) }
+.bg-spanish { background-image: url(./assets/imgs/spain.png) }
+.bg-english { background-image: url(./assets/imgs/united-kingdom.png) }
+.bg-french { background-image: url(./assets/imgs/france.png) }
+
+.bg-home { background-image: url(./assets/imgs/portada.png)}
+
+/* Fonts */
+@font-face {
+  font-family: "DMSansRegular";   /*Can be any text*/
+  src: local("DMSansRegular"),
+    url("./assets/fonts/DMSans-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "DMSansMedium";   /*Can be any text*/
+  src: local("DMSansMedium"),
+    url("./assets/fonts/DMSans-Medium.ttf") format("truetype");
+}
+.medium {
+  font-family: "DMSansMedium";
+}
+@font-face {
+  font-family: "DMSansBold";   /*Can be any text*/
+  src: local("DMSansBold"),
+  url("./assets/fonts/DMSans-Bold.ttf") format("truetype");
+}
+.bold {
+  font-family: "DMSansBold";
+}
+@font-face {
+  font-family: "Pirata";   /*Can be any text*/
+  src: local("Pirata"),
+  url("./assets/fonts/PirataOne-Regular.ttf") format("truetype");
+}
+.pirata {
+  font-family: "Pirata";
+}
