@@ -27,5 +27,6 @@ const homeStyle = {
     fontSize: '9rem',
     margin: 0,
     letterSpacing: '2px',
+    fontWeight: 100,
   },
 }

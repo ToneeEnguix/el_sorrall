@@ -41,8 +41,8 @@ export const textAtom = atom({
     french: {
       navbar: {
         menu: 'Menu',
-        who: 'merde',
-        where: 'alors',
+        who: 'france',
+        where: 'france',
         contact: 'la',
         reserve: 'france',
       },
