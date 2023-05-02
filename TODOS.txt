@@ -1,5 +1,4 @@
 TODOS:
-  - navbar invert colors on scroll
   - test animated wave
   - add navigation functionality ( go to section on navbar click )
 

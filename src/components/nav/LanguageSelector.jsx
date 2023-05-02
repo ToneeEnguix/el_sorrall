@@ -42,7 +42,6 @@ const languages = {
 const selectorStyle = {
   display: 'flex',
   alignItems: 'center',
-  margin: '-.3rem 0 0 1rem',
   '.item': {
     marginLeft: '1rem',
     span: {

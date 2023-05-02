@@ -27,9 +27,9 @@ export default function Navbar() {
 }
 
 const navbarStyle = {
-  height: '96px',
   width: '100vw',
   maxWidth: '100vw',
+  padding: '24px 0',
   display: 'grid',
   gridTemplateColumns: '1fr 2fr',
   alignItems: 'center',
@@ -38,16 +38,13 @@ const navbarStyle = {
   left: 0,
   fontSize: '1.23rem',
   zIndex: 10,
-  '.left': {
+  '.left, .right': {
     display: 'flex',
-    padding: '24px 0 24px 80px',
+    padding: '0 80px',
   },
   '.right': {
-    padding: '24px 80px 24px 0',
-    display: 'flex',
     alignItems: 'center',
     justifyContent: 'flex-end',
-    marginTop: '-.5rem',
   },
 }
 
