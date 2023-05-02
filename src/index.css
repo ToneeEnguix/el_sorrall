@@ -3,7 +3,6 @@ body {
   margin: 0;
   box-sizing: border-box;
   letter-spacing: '1px';
-  font-size: 20px;
   font-family: 'JakartaSans';
 
   /* Hide scrollbar for IE, Edge and Firefox */
@@ -19,12 +18,18 @@ h1 {
   font-family: 'Pirata';
   font-size: 142px;
   font-weight: 400;
+  color: #fdf8e7;
+  margin: 0;
+  letter-spacing: 2px;
 }
 
 h2 {
   font-family: 'Pirata';
   font-size: 88px;
   font-weight: 400;
+  color: #cac6ba;
+  margin: 0 0 32px;
+  letter-spacing: 2px;
 }
 
 .subtitle {

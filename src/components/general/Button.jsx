@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Button(props) {
   return (
-    <button className='pointer medium white' css={buttonStyle}>
+    <button className='pointer white' css={buttonStyle}>
       {props.children}
     </button>
   )

@@ -17,6 +17,7 @@ export default function LanguageSelector() {
             className='item pointer'
             onClick={() => setLanguageRecoil(lang)}
             key={lang}
+            tabindex='0'
           >
             <span
               className={`white ${lang === languageRecoil ? 'active' : ''}`}

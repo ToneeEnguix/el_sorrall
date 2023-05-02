@@ -14,16 +14,13 @@ export default function Home() {
 }
 
 const homeStyle = {
-  minHeight: '110vh',
+  height: '85vh',
   backgroundPosition: 'center',
   backgroundSize: 'cover',
   display: 'flex',
   flexDirection: 'column',
   padding: 'calc(96px + 40px) 0 0 80px',
   h1: {
-    color: '#FDF8E7',
-    margin: 0,
-    letterSpacing: '2px',
-    lineHeight: '140px',
+    lineHeight: '156px',
   },
 }

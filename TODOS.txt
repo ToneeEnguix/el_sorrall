@@ -1,7 +1,9 @@
 TODOS:
-- add outline to logo
-- add outline to languages
+  - navbar invert colors on scroll
+  - test animated wave
+  - add navigation functionality ( go to section on navbar click )
+
 ELISA:
-- logo bad quality
 
 DONE:
+- add outline to languages

@@ -14,7 +14,7 @@ export default function Navbar() {
       <div className='left bold'>
         <LanguageSelector />
       </div>
-      <div className='right medium'>
+      <div className='right'>
         <Link to='/'>{text[lang].navbar.menu}</Link>
         <Link to='/'>{text[lang].navbar.who}</Link>
         <Link to='/'>{text[lang].navbar.where}</Link>
@@ -50,7 +50,7 @@ const navbarStyle = {
 
 const Link = (props) => {
   return (
-    <NavLink className='white bold' css={linkStyle}>
+    <NavLink className='bold' css={linkStyle}>
       {props.children}
     </NavLink>
   )
@@ -61,6 +61,7 @@ const linkStyle = {
   textDecoration: 'none',
   transition: 'all 200ms linear',
   letterSpacing: '.05rem',
+  mixBlendMode: 'difference',
   ':hover': {
     color: 'lightgray',
   },
