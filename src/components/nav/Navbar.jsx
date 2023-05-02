@@ -1,8 +1,9 @@
 import { NavLink } from 'react-router-dom'
+import { useRecoilValue } from 'recoil'
 
 import LanguageSelector from './LanguageSelector'
-import { useRecoilValue } from 'recoil'
 import { languageAtom, textAtom } from '../../state/atoms'
+
 import Button from '../general/Button'
 
 export default function Navbar() {
@@ -27,20 +28,22 @@ export default function Navbar() {
 
 const navbarStyle = {
   height: '96px',
-  width: 'calc(100vw - 2rem)',
+  width: '100vw',
   maxWidth: '100vw',
   display: 'grid',
   gridTemplateColumns: '1fr 2fr',
   alignItems: 'center',
   position: 'fixed',
   top: 0,
+  left: 0,
   fontSize: '1.23rem',
+  zIndex: 10,
   '.left': {
     display: 'flex',
-    padding: '24px 1.78rem',
+    padding: '24px 0 24px 80px',
   },
   '.right': {
-    padding: '24px .8rem 24px 0',
+    padding: '24px 80px 24px 0',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'flex-end',
@@ -50,7 +53,7 @@ const navbarStyle = {
 
 const Link = (props) => {
   return (
-    <NavLink className='bold' css={linkStyle}>
+    <NavLink className='bold white' css={linkStyle}>
       {props.children}
     </NavLink>
   )
@@ -61,7 +64,6 @@ const linkStyle = {
   textDecoration: 'none',
   transition: 'all 200ms linear',
   letterSpacing: '.05rem',
-  mixBlendMode: 'difference',
   ':hover': {
     color: 'lightgray',
   },
