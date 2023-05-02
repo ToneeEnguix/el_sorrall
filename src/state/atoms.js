@@ -16,7 +16,7 @@ export const textAtom = atom({
         contact: 'Contacte',
         reserve: 'Reserva',
       },
-      home: { title: 'Benvinguts' },
+      home: { title1: 'Restaurant', title2: 'El Sorrall' },
     },
     spanish: {
       navbar: {
@@ -26,7 +26,7 @@ export const textAtom = atom({
         contact: 'Contacto',
         reserve: 'Reserva',
       },
-      home: { title: 'Bienvenidos' },
+      home: { title1: 'Restaurant', title2: 'El Sorrall' },
     },
     english: {
       navbar: {
@@ -36,7 +36,7 @@ export const textAtom = atom({
         contact: 'Contact',
         reserve: 'Reserve',
       },
-      home: { title: 'Welcome' },
+      home: { title1: 'Restaurant', title2: 'El Sorrall' },
     },
     french: {
       navbar: {
@@ -46,7 +46,7 @@ export const textAtom = atom({
         contact: 'la',
         reserve: 'france',
       },
-      home: { title: 'Bienvenue' },
+      home: { title1: 'Restaurant', title2: 'El Sorrall' },
     },
   },
 })

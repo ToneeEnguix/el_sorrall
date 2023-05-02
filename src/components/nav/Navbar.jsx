@@ -1,9 +1,9 @@
 import { NavLink } from 'react-router-dom'
 
 import LanguageSelector from './LanguageSelector'
-import Logo from './Logo'
 import { useRecoilValue } from 'recoil'
 import { languageAtom, textAtom } from '../../state/atoms'
+import Button from '../general/Button'
 
 export default function Navbar() {
   const lang = useRecoilValue(languageAtom)
@@ -12,7 +12,6 @@ export default function Navbar() {
   return (
     <div css={navbarStyle}>
       <div className='left bold'>
-        <Logo />
         <LanguageSelector />
       </div>
       <div className='right medium'>
@@ -27,23 +26,21 @@ export default function Navbar() {
 }
 
 const navbarStyle = {
-  height: '145px',
+  height: '96px',
   width: 'calc(100vw - 2rem)',
   maxWidth: '100vw',
   display: 'grid',
   gridTemplateColumns: '1fr 2fr',
   alignItems: 'center',
-  // backgroundColor: '#d3d3d373',
   position: 'fixed',
   top: 0,
-  color: 'white',
   fontSize: '1.23rem',
   '.left': {
     display: 'flex',
-    padding: '0 1.78rem',
+    padding: '24px 1.78rem',
   },
   '.right': {
-    padding: '0 .8rem 0 0',
+    padding: '24px .8rem 24px 0',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'flex-end',
@@ -51,35 +48,16 @@ const navbarStyle = {
   },
 }
 
-const Button = (props) => {
-  return (
-    <button className='pointer medium' css={buttonStyle}>
-      {props.children}
-    </button>
-  )
-}
-
-const buttonStyle = {
-  backgroundColor: '#050E80',
-  borderRadius: '100px',
-  border: 'none',
-  color: 'white',
-  padding: '1.1rem 2.5rem',
-  transition: 'all 200ms linear',
-  fontSize: '1.2rem',
-  marginLeft: '1.75rem',
-  ':hover': {
-    backgroundColor: 'yellow',
-  },
-}
-
 const Link = (props) => {
-  return <NavLink css={linkStyle}>{props.children}</NavLink>
+  return (
+    <NavLink className='white bold' css={linkStyle}>
+      {props.children}
+    </NavLink>
+  )
 }
 
 const linkStyle = {
   marginRight: '1.5rem',
-  color: 'white',
   textDecoration: 'none',
   transition: 'all 200ms linear',
   letterSpacing: '.05rem',

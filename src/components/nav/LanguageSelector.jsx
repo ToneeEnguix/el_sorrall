@@ -18,7 +18,9 @@ export default function LanguageSelector() {
             onClick={() => setLanguageRecoil(lang)}
             key={lang}
           >
-            <span className={lang === languageRecoil ? 'active' : ''}>
+            <span
+              className={`white ${lang === languageRecoil ? 'active' : ''}`}
+            >
               {languages[lang].txt}
             </span>
             <hr className={lang === languageRecoil ? `bg-${lang}` : ''}></hr>
@@ -42,9 +44,11 @@ const selectorStyle = {
   margin: '-.3rem 0 0 1rem',
   '.item': {
     marginLeft: '1rem',
-    transition: 'all 200ms linear',
-    ':hover': {
-      color: 'gray',
+    span: {
+      transition: 'all 200ms linear',
+      ':hover': {
+        color: 'gray',
+      },
     },
     hr: {
       margin: 0,
@@ -54,6 +58,6 @@ const selectorStyle = {
     },
   },
   '.active': {
-    color: '#050E80',
+    color: '#050E80 !important',
   },
 }
