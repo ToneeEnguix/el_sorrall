@@ -1,7 +1,10 @@
-body {
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+body {
   letter-spacing: '1px';
   font-family: 'JakartaSans';
   background: #fcfbf8;
@@ -9,6 +12,10 @@ body {
   /* Hide scrollbar for IE, Edge and Firefox */
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+}
+
+img {
+  width: 100%;
 }
 
 body::-webkit-scrollbar {
@@ -40,10 +47,13 @@ h2 {
 .body {
   font-weight: 400;
   font-size: 16px;
+  color: #292823;
+  line-height: 1.5em;
 }
 .bold {
   font-weight: 600;
   font-size: 16px;
+  line-height: 1.5em;
 }
 button {
   font-weight: 600;

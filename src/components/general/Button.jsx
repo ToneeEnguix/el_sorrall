@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Button(props) {
   return (
-    <button className='pointer white' css={buttonStyle}>
+    <button className={`pointer white ${props.className}`} css={buttonStyle}>
       {props.children}
     </button>
   )
@@ -16,6 +16,7 @@ const buttonStyle = {
   height: '48px',
   transition: 'all 200ms linear',
   marginLeft: '1.75rem',
+  letterSpacing: '1px',
   ':hover': {
     backgroundColor: 'yellow',
   },

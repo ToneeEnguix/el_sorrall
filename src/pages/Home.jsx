@@ -14,7 +14,7 @@ export default function Home() {
 }
 
 const homeStyle = {
-  height: '85vh',
+  height: '100vh',
   backgroundPosition: 'center',
   backgroundSize: 'cover',
   display: 'flex',
