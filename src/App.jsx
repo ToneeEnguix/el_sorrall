@@ -5,6 +5,8 @@ import Navbar from './components/nav/Navbar'
 import Footer from './components/nav/Footer'
 import Wave from './components/general/Wave'
 import Products from './pages/Products'
+import Blanes from './pages/Blanes'
+import Restaurant from './pages/Restaurant'
 
 export default function App() {
   return (
@@ -16,6 +18,8 @@ export default function App() {
       <Home />
       <Wave />
       <Products />
+      <Blanes />
+      <Restaurant />
       <Footer />
     </>
   )

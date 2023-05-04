@@ -2,9 +2,9 @@ import React from 'react'
 
 import Button from '../components/general/Button'
 
-import img1 from '../assets/imgs/1.webp'
-import img2 from '../assets/imgs/2.webp'
-import img3 from '../assets/imgs/3.webp'
+import img1 from '../assets/imgs/products_1.webp'
+import img2 from '../assets/imgs/products_2.webp'
+import img3 from '../assets/imgs/products_3.webp'
 
 export default function Products() {
   return (
@@ -25,8 +25,7 @@ export default function Products() {
 
 const productsStyle = {
   minHeight: '100vh',
-  padding: '0 80px 500px',
-  textAlign: 'center',
+  padding: '0 80px',
   h2: {
     margin: 0,
   },

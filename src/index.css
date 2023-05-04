@@ -8,7 +8,7 @@ body {
   letter-spacing: '1px';
   font-family: 'JakartaSans';
   background: #fcfbf8;
-
+  text-align: center;
   /* Hide scrollbar for IE, Edge and Firefox */
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
@@ -29,11 +29,21 @@ h1 {
   color: #fdf8e7;
   margin: 0;
   letter-spacing: 2px;
+  text-align: left;
 }
 
 h2 {
   font-family: 'Pirata';
   font-size: 88px;
+  font-weight: 400;
+  color: #cac6ba;
+  margin: 0 0 32px;
+  letter-spacing: 2px;
+}
+
+h3 {
+  font-family: 'Pirata';
+  font-size: 64px;
   font-weight: 400;
   color: #cac6ba;
   margin: 0 0 32px;
