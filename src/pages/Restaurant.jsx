@@ -1,9 +1,8 @@
 import React from 'react'
 
-import img1 from '../assets/imgs/blanes_1.webp'
-import img2 from '../assets/imgs/blanes_2.webp'
-import img3 from '../assets/imgs/blanes_3.webp'
-import img4 from '../assets/imgs/blanes_4.webp'
+import img1 from '../assets/imgs/restaurant_1.webp'
+import img2 from '../assets/imgs/restaurant_2.webp'
+import img3 from '../assets/imgs/restaurant_3.webp'
 
 export default function Restaurant() {
   return (
@@ -40,9 +39,6 @@ const Pics = () => {
       <div>
         <img alt='' src={img3} />
       </div>
-      <div>
-        <img alt='' src={img4} />
-      </div>
     </div>
   )
 }
@@ -50,7 +46,7 @@ const Pics = () => {
 const picsStyle = {
   marginTop: '48px',
   display: 'grid',
-  gridTemplateColumns: 'repeat(3, 1fr) 2fr',
+  gridTemplateColumns: '2fr repeat(2, 1fr)',
   height: '416px',
   gap: '16px',
   div: {
