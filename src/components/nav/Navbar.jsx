@@ -6,9 +6,19 @@ import { languageAtom, textAtom } from '../../state/atoms'
 
 import Button from '../general/Button'
 
-export default function Navbar() {
+export default function Navbar({ ref1, ref2, ref3 }) {
   const lang = useRecoilValue(languageAtom)
   const text = useRecoilValue(textAtom)
+
+  const scrollToSection1 = () => {
+    ref1.current.scrollIntoView({ behavior: 'smooth' })
+  }
+  const scrollToSection2 = () => {
+    ref2.current.scrollIntoView({ behavior: 'smooth' })
+  }
+  const scrollToSection3 = () => {
+    ref3.current.scrollIntoView({ behavior: 'smooth' })
+  }
 
   return (
     <div css={navbarStyle}>
@@ -16,10 +26,10 @@ export default function Navbar() {
         <LanguageSelector />
       </div>
       <div className='right'>
-        <Link to='/'>{text[lang].navbar.menu}</Link>
-        <Link to='/'>{text[lang].navbar.who}</Link>
-        <Link to='/'>{text[lang].navbar.where}</Link>
-        <Link to='/'>{text[lang].navbar.contact}</Link>
+        <Link onClick={scrollToSection1}>{text[lang].navbar.menu}</Link>
+        <Link onClick={scrollToSection2}>{text[lang].navbar.who}</Link>
+        <Link onClick={scrollToSection3}>{text[lang].navbar.where}</Link>
+        {/* <Link onClick={scrollToSection4}>{text[lang].navbar.contact}</Link> */}
         <Button>{text[lang].navbar.reserve}</Button>
       </div>
     </div>
@@ -50,9 +60,9 @@ const navbarStyle = {
 
 const Link = (props) => {
   return (
-    <NavLink className='bold white' css={linkStyle}>
+    <div className='pointer bold white' onClick={props.onClick} css={linkStyle}>
       {props.children}
-    </NavLink>
+    </div>
   )
 }
 

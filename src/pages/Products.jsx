@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 
 import Button from '../components/general/Button'
 
@@ -6,11 +6,11 @@ import img1 from '../assets/imgs/products_1.webp'
 import img2 from '../assets/imgs/products_2.webp'
 import img3 from '../assets/imgs/products_3.webp'
 
-export default function Products() {
+export default function Products({ linkRef }) {
   return (
     <div css={productsStyle}>
-      <h2>Els nostres plats</h2>
-      <h2>de cuina casolana</h2>
+      <div ref={linkRef} className='linkHere' />
+      <h2>Els nostres plats casolans</h2>
       <p className='body'>
         Descubre nuestros platos inspirados en recetas de la cocina tradicional
         catalana. Nuestro objetivo principal es proporcionar platos que
@@ -26,6 +26,11 @@ export default function Products() {
 const productsStyle = {
   minHeight: '100vh',
   padding: '0 80px',
+  position: 'relative',
+  '.linkHere': {
+    position: 'absolute',
+    top: '-7vw',
+  },
   h2: {
     margin: 0,
   },

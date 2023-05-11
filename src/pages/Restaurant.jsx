@@ -4,9 +4,10 @@ import img1 from '../assets/imgs/restaurant_1.webp'
 import img2 from '../assets/imgs/restaurant_2.webp'
 import img3 from '../assets/imgs/restaurant_3.webp'
 
-export default function Restaurant() {
+export default function Restaurant({ linkRef }) {
   return (
     <div css={blanesStyle}>
+      <div ref={linkRef} className='linkHere' />
       <h3>El Restaurant a la vora de la mar</h3>
       <p className='body'>
         El Sorrall esta situado en el paseo marítimo a primera linea de mar,
@@ -21,6 +22,11 @@ export default function Restaurant() {
 
 const blanesStyle = {
   marginTop: '150px',
+  position: 'relative',
+  '.linkHere': {
+    position: 'absolute',
+    top: '-7vw',
+  },
   p: {
     width: '51%',
     margin: '0 auto',

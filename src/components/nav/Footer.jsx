@@ -39,11 +39,12 @@ export default function Footer() {
 
 const footerStyle = {
   marginTop: '180px',
-  height: '285px',
+  minHeight: '285px',
   backgroundColor: '#4A4740',
   display: 'flex',
   // gridTemplateColumns: '1.5fr 2fr',
   padding: '47px 50px',
+  flexWrap: 'wrap',
   '.left': {
     display: 'flex',
     // gridTemplateColumns: '1fr 1fr',
@@ -70,15 +71,15 @@ const footerStyle = {
       width: '240px',
       height: '190px',
       marginLeft: '3.5rem',
+      marginRight: '3.3rem',
       borderRadius: '12px',
     },
   },
   '.right': {
-    width: '80%',
+    width: 'fit-content',
     display: 'flex',
     justifyContent: 'center',
     flexDirection: 'column',
-    marginLeft: '3.3rem',
     textAlign: 'left',
     p: {
       marginTop: '.75rem',
@@ -86,6 +87,9 @@ const footerStyle = {
       fontWeight: 200,
       fontSize: '15px',
       lineHeight: '1.4em',
+    },
+    '.small': {
+      fontWeight: 400,
     },
   },
 }

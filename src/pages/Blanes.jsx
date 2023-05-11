@@ -5,9 +5,10 @@ import img2 from '../assets/imgs/blanes_2.webp'
 import img3 from '../assets/imgs/blanes_3.webp'
 import img4 from '../assets/imgs/blanes_4.webp'
 
-export default function Blanes() {
+export default function Blanes({ linkRef }) {
   return (
     <div css={blanesStyle}>
+      <div ref={linkRef} className='linkHere' />
       <h3>Blanes, primer poble de la costa brava</h3>
       <p className='body'>
         Déjate encantar por el pueblo que inicia el recorrido de la fantástica
@@ -21,6 +22,11 @@ export default function Blanes() {
 
 const blanesStyle = {
   marginTop: '150px',
+  position: 'relative',
+  '.linkHere': {
+    position: 'absolute',
+    top: '-7vw',
+  },
   p: {
     width: '51%',
     margin: '0 auto',

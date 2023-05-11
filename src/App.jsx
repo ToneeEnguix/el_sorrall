@@ -1,4 +1,4 @@
-// import { Routes, Route } from 'react-router-dom'
+import { useRef } from 'react'
 
 import Home from './pages/Home'
 import Navbar from './components/nav/Navbar'
@@ -9,17 +9,18 @@ import Blanes from './pages/Blanes'
 import Restaurant from './pages/Restaurant'
 
 export default function App() {
+  const linkRef1 = useRef(null)
+  const linkRef2 = useRef(null)
+  const linkRef3 = useRef(null)
+
   return (
     <>
-      <Navbar />
-      {/* <Routes>
-        <Route path='/' element={<Home />} />
-      </Routes> */}
+      <Navbar ref1={linkRef1} ref2={linkRef2} ref3={linkRef3} />
       <Home />
       <Wave />
-      <Products />
-      <Blanes />
-      <Restaurant />
+      <Products linkRef={linkRef1} />
+      <Blanes linkRef={linkRef2} />
+      <Restaurant linkRef={linkRef3} />
       <Footer />
     </>
   )
