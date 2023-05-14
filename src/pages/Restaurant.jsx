@@ -1,20 +1,21 @@
 import React from 'react'
+import { useRecoilValue } from 'recoil'
+
+import { languageAtom, textAtom } from '../state/atoms'
 
 import img1 from '../assets/imgs/restaurant_1.webp'
 import img2 from '../assets/imgs/restaurant_2.webp'
 import img3 from '../assets/imgs/restaurant_3.webp'
 
 export default function Restaurant({ linkRef }) {
+  const lang = useRecoilValue(languageAtom)
+  const text = useRecoilValue(textAtom)
+
   return (
     <div css={blanesStyle}>
       <div ref={linkRef} className='linkHere' />
-      <h3>El Restaurant a la vora de la mar</h3>
-      <p className='body'>
-        El Sorrall esta situado en el paseo marítimo a primera linea de mar,
-        permitiendo a nuestros clientes una vista privilegiada mientras
-        disfrutan de los platos que servimos. Nuestro equipo de profesionales te
-        harán sentir como en casa y con ganas de volver a hacernos una visita.
-      </p>
+      <h3>{text[lang].restaurant.title}</h3>
+      <p className='body'>{text[lang].restaurant.subtitle}</p>
       <Pics />
     </div>
   )
@@ -34,16 +35,19 @@ const blanesStyle = {
 }
 
 const Pics = () => {
+  const lang = useRecoilValue(languageAtom)
+  const text = useRecoilValue(textAtom)
+
   return (
     <div css={picsStyle}>
       <div>
-        <img alt='' src={img1} />
+        <img alt={text[lang].restaurant.img1alt} src={img1} />
       </div>
       <div>
-        <img alt='' src={img2} />
+        <img alt={text[lang].restaurant.img2alt} src={img2} />
       </div>
       <div>
-        <img alt='' src={img3} />
+        <img alt={text[lang].restaurant.img3alt} src={img3} />
       </div>
     </div>
   )

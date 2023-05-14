@@ -1,12 +1,20 @@
+import { useRecoilValue } from 'recoil'
+
+import { languageAtom, textAtom } from '../../state/atoms'
 // import mapaImg from '../../assets/imgs/mapa'
 
 export default function Footer() {
+  const lang = useRecoilValue(languageAtom)
+  const text = useRecoilValue(textAtom)
+
   return (
     <div css={footerStyle}>
       <div className='left'>
         <div>
-          <h1>Restaurant El Sorrall</h1>
-          <p className='body'>Gastronomia catalana</p>
+          <h1>
+            {text[lang].home.title1} {text[lang].home.title2}
+          </h1>
+          <p className='body'>{text[lang].footer.subtitle}</p>
         </div>
         <iframe
           src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2980.427919894974!2d2.7841846760558053!3d41.66810087126568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12bb162296f5422d%3A0x9b5eaa7610bc5158!2sRestaurant%20El%20Sorrall!5e0!3m2!1sen!2ses!4v1683712813694!5m2!1sen!2ses'
@@ -18,20 +26,17 @@ export default function Footer() {
       </div>
       <div className='right'>
         <p className='body'>
-          ¿Dónde nos puedes encontrar?
+          {text[lang].footer.p1_1}
           <br />
-          Passeig de s'Abanell, 6, baixos, 17300 Blanes, Girona
+          {text[lang].footer.p1_2}
         </p>
-        <p className='body'>Telefono de contacto: 972333420</p>
+        <p className='body'>{text[lang].footer.p2}</p>
         <p className='body'>
-          Abierto todos los días de 10 a 16 exceptuando
+          {text[lang].footer.p3_1}
           <br />
-          los martes por descanso del personal
+          {text[lang].footer.p3_2}
         </p>
-        <p className='small'>
-          (Las reservas no pueden exceder los 6 comensales por motivos
-          logistícos)
-        </p>
+        <p className='small'>{text[lang].footer.p4}</p>
       </div>
     </div>
   )

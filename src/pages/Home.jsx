@@ -1,4 +1,5 @@
 import { useRecoilValue } from 'recoil'
+
 import { languageAtom, textAtom } from '../state/atoms'
 
 export default function Home() {
