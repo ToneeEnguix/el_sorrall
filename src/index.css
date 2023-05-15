@@ -23,6 +23,10 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+a {
+  color: inherit;
+}
+
 h1 {
   font-family: 'Pirata';
   font-size: 142px;

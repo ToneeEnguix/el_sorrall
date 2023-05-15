@@ -1,11 +1,11 @@
 DOING:
-- links en footer ( call, map, etc )
+- carta!!!
 
 TODOS:
-- carta!!!
 - resposnivenesnessness
 
 DONE:
+- links en footer ( call, map, etc )
 - boton scrollUp
 - negritas!!!
 - color navbar links

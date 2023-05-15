@@ -28,9 +28,16 @@ export default function Footer() {
         <p className='body'>
           {text[lang].footer.p1_1}
           <br />
-          {text[lang].footer.p1_2}
+          <a
+            href='https://www.google.com/maps/place/Restaurant+El+Sorrall/@41.668101,2.78676,15z/data=!4m6!3m5!1s0x12bb162296f5422d:0x9b5eaa7610bc5158!8m2!3d41.6681009!4d2.7867596!16s%2Fg%2F1td3bxwk?hl=en'
+            target='_blank'
+          >
+            {text[lang].footer.p1_2}
+          </a>
         </p>
-        <p className='body'>{text[lang].footer.p2}</p>
+        <p className='body'>
+          <a href='tel:+34972333420'>{text[lang].footer.p2}</a>
+        </p>
         <p className='body'>
           {text[lang].footer.p3_1}
           <br />
