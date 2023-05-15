@@ -1,14 +1,14 @@
-TODOS:
-- color navbar links
+DOING:
 - negritas!!!
+
+TODOS:
 - boton scrollUp
 - links en footer ( call, map, etc )
 - carta!!!
 - resposnivenesnessness
 
-ELISA:
-
 DONE:
-- add outline to languages
-- test animated wave
+- color navbar links
 - add navigation functionality ( go to section on navbar click )
+- test animated wave
+- add outline to languages

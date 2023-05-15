@@ -16,7 +16,11 @@ export default function Blanes({ linkRef }) {
     <div css={blanesStyle}>
       <div ref={linkRef} className='linkHere' />
       <h3>{text[lang].blanes.title}</h3>
-      <p className='body'>{text[lang].blanes.subtitle}</p>
+      <p className='body'>
+        {text[lang].blanes.subtitle1}
+        <b>{text[lang].blanes.subtitle2}</b>
+        {text[lang].blanes.subtitle3}
+      </p>
       <Pics />
     </div>
   )

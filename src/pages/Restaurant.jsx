@@ -15,7 +15,13 @@ export default function Restaurant({ linkRef }) {
     <div css={blanesStyle}>
       <div ref={linkRef} className='linkHere' />
       <h3>{text[lang].restaurant.title}</h3>
-      <p className='body'>{text[lang].restaurant.subtitle}</p>
+      <p className='body'>
+        {text[lang].restaurant.subtitle1}
+        <b>{text[lang].restaurant.subtitle2}</b>
+        {text[lang].restaurant.subtitle3}
+        <b>{text[lang].restaurant.subtitle4}</b>
+        {text[lang].restaurant.subtitle5}
+      </p>
       <Pics />
     </div>
   )

@@ -45,9 +45,10 @@ const selectorStyle = {
   '.item': {
     marginLeft: '1rem',
     span: {
+      color: '#000D80',
       transition: 'all 200ms linear',
       ':hover': {
-        color: 'gray',
+        color: '#59609d',
       },
     },
     hr: {
@@ -58,6 +59,6 @@ const selectorStyle = {
     },
   },
   '.active': {
-    color: '#050E80 !important',
+    color: '#FDF8E7 !important',
   },
 }

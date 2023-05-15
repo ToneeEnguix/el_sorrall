@@ -23,7 +23,12 @@ export default function Products({ linkRef }) {
     <div css={productsStyle}>
       <div ref={linkRef} className='linkHere' />
       <h2>{text[lang].products.title}</h2>
-      <p className='body'>{text[lang].products.subtitle}</p>
+      <p className='body'>
+        {text[lang].products.subtitle1}
+        <b>{text[lang].products.subtitle2}</b>
+        {text[lang].products.subtitle3}
+        <b>{text[lang].products.subtitle4}</b>
+      </p>
       <Grid />
       <Button className='btnWrapper' onClick={() => setShowModal(true)}>
         {text[lang].products.button}

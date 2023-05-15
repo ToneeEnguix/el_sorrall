@@ -23,8 +23,11 @@ export const textAtom = atom({
       },
       products: {
         title: 'Els nostres plats casolans',
-        subtitle:
-          'Descobreix els nostres plats inspirats en receptes de la cuina tradicional catalana. El nostre objectiu principal és proporcionar plats que representin els sabors de la cuina clàssica de la nostra terra i amb això aportar un acostament a la gastronomia catalana.',
+        subtitle1: 'Descobreix els nostres plats inspirats en receptes de la ',
+        subtitle2: 'cuina tradicional catalana',
+        subtitle3:
+          '. El nostre objectiu principal és proporcionar plats que representin els sabors de la cuina clàssica de la nostra terra i amb això aportar un ',
+        subtitle4: 'acostament a la gastronomia catalana.',
         dish1: 'Amanida d’alvocat',
         description1: 'En llit de tomàquet i llagostins',
         dish2: 'Confit d’ànec',
@@ -35,8 +38,10 @@ export const textAtom = atom({
       },
       blanes: {
         title: 'Blanes, primer poble de la costa brava',
-        subtitle:
-          'Deixa’t encantar pel poble que inicia el recorregut de la fantàstica Costa Brava catalana. Veuen a gaudir d’un dia de platja, de les milers de rutes de senderisme i de la calidesa dels seus habitants.',
+        subtitle1: 'Deixa’t encantar pel poble que ',
+        subtitle2: 'inicia el recorregut de la fantàstica Costa Brava catalana',
+        subtitle3:
+          '. Vine a gaudir d’un dia de platja, de les milers de rutes de senderisme i de la calidesa dels seus habitants.',
         img1alt: 'detall de paret',
         img2alt: 'vela de veler',
         img3alt: 'pescador pelant al costat del mar',
@@ -44,8 +49,12 @@ export const textAtom = atom({
       },
       restaurant: {
         title: 'El Restaurant a la vora de la mar',
-        subtitle:
-          'El Sorrall esta situat en el passeig marítim a primera línia de mar, permetent als nostres clients una vista privilegiada mentre gaudeixen dels plats que servim. El nostre equip de professionals et faran sentir com a casa i amb ganes de tornar a fer-nos una visita.',
+        subtitle1: 'El Sorrall esta situat en el passeig marítim a ',
+        subtitle2: 'primera línia de mar',
+        subtitle3:
+          ', permetent als nostres clients una vista privilegiada mentre gaudeixen dels plats que servim. El nostre equip de professionals et faran ',
+        subtitle4: 'sentir com a casa',
+        subtitle5: ' i amb ganes de tornar a fer-nos una visita.',
         img1alt: 'grup d’amics menjant en una gran taula',
         img2alt: 'detall de mans de xef mentre talla verdura',
         img3alt: 'detall de cap de xef concentrat',
@@ -74,8 +83,11 @@ export const textAtom = atom({
       },
       products: {
         title: 'Nuestros platos caseros',
-        subtitle:
-          'Descubre nuestros platos inspirados en recetas  de la cocina tradicional catalana. Nuestro objetivo principal es proporcionar platos que representen los sabores de la cocina clásica de nuestra tierra y con ello aportar un acercamiento a la gastronomía catalana.',
+        subtitle1: 'Descubre nuestros platos inspirados en recetas de la ',
+        subtitle2: 'cocina tradicional catalana',
+        subtitle3:
+          '. Nuestro objetivo principal es proporcionar platos que representen los sabores de la cocina clásica de nuestra tierra y con ello aportar un ',
+        subtitle4: 'acercamiento a la gastronomía catalana.',
         dish1: 'Ensalada de aguacate',
         description1: 'En cama de tomate y langostinos',
         dish2: 'Peladilla de pato',
@@ -87,8 +99,10 @@ export const textAtom = atom({
       },
       blanes: {
         title: 'Blanes, primer pueblo de la costa Brava',
-        subtitle:
-          'Déjate encantar por el pueblo que inicia el recorrido de la fantástica Costa Brava catalana. Ven a disfrutar de un día de playa, de las miles de rutas de senderismo y de la calidez de sus habitantes.',
+        subtitle1: 'Déjate encantar por el pueblo que ',
+        subtitle2: 'inicia el recorrido de la fantástica Costa Brava catalana',
+        subtitle3:
+          '. Ven a disfrutar de un día de playa, de las miles de rutas de senderismo y de la calidez de sus habitantes.',
         img1alt: 'detalle de pared',
         img2alt: 'vela de barco',
         img3alt: 'pescador pelando al lado del mar',
@@ -96,8 +110,12 @@ export const textAtom = atom({
       },
       restaurant: {
         title: 'El Restaurant al lado del mar',
-        subtitle:
-          'El Sorrall está situado en el paseo marítimo a primera linea de mar, permitiendo a nuestros clientes una vista privilegiada mientras disfrutan de los platos que servimos. Nuestro equipo de profesionales te harán sentir como en casa y con ganas de volver a hacernos una visita.',
+        subtitle1: 'El Sorrall está situado en el paseo marítimo a ',
+        subtitle2: 'primera linea de mar',
+        subtitle3:
+          ', permitiendo a nuestros clientes una vista privilegiada mientras disfrutan de los platos que servimos. Nuestro equipo de profesionales te harán ',
+        subtitle4: 'sentir como en casa ',
+        subtitle5: 'y con ganas de volver a hacernos una visita.',
         img1alt: 'grupo de amigos comiendo en una gran mesa',
         img2alt: 'detalle de manos de chef mientras cortan verdura',
         img3alt: 'detalle de cabeza de chef concentrado',
@@ -126,8 +144,11 @@ export const textAtom = atom({
       },
       products: {
         title: 'Our Homemade Dishes',
-        subtitle:
-          'Discover our dishes inspired by traditional Catalan recipes. Our main objective is to provide dishes that represent the flavors of the classic cuisine of our land and thus provide an approach to Catalan cuisine.',
+        subtitle1: 'Discover our dishes inspired by ',
+        subtitle2: 'traditional Catalan recipes',
+        subtitle3:
+          '. Our main objective is to provide dishes that represent the flavors of the classic cuisine of our land and thus provide an ',
+        subtitle4: 'approach to Catalan cuisine.',
         dish1: 'Avocado salad',
         description1: 'With a tomato bed and prawns',
         dish2: 'Duck peeler',
@@ -138,8 +159,10 @@ export const textAtom = atom({
       },
       blanes: {
         title: 'Blanes, the first town on the Costa Brava',
-        subtitle:
-          'Let yourself be enchanted by the town that begins the journey of the fantastic Catalan Costa Brava. Come and enjoy a day at the beach, the thousands of hiking trails and the warmth of its inhabitants.',
+        subtitle1: 'Let yourself be enchanted by the town that ',
+        subtitle2: 'begins the journey of the fantastic Catalan Costa Brava',
+        subtitle3:
+          '. Come and enjoy a day at the beach, the thousands of hiking trails and the warmth of its inhabitants.',
         img1alt: 'detail of wall',
         img2alt: 'boat sail',
         img3alt: 'fisherman peeling next to the sea',
@@ -147,8 +170,12 @@ export const textAtom = atom({
       },
       restaurant: {
         title: 'The restaurant by the sea',
-        subtitle:
-          'The Sorrall is located on the seafront on the seafront, allowing our guests a privileged view while enjoying the dishes we serve. Our team of professionals will make you feel at home and eager to visit us again.',
+        subtitle1: 'The Sorrall is located ',
+        subtitle2: 'on the seafront',
+        subtitle3:
+          ', allowing our guests a privileged view while enjoying the dishes we serve. Our team of professionals will make you ',
+        subtitle4: 'feel at home ',
+        subtitle5: 'and eager to visit us again.',
         img1alt: 'group of friends eating in a big table',
         img2alt: 'detail of hands of xef while cutting vegetables',
         img3alt: 'detail of head of xef focused',
@@ -177,11 +204,14 @@ export const textAtom = atom({
       },
       products: {
         title: 'Nos plats faits maisonlats casolans',
-        subtitle:
-          'Découvrez nos plats inspirés des recettes catalanes traditionnelles. Notre objectif principal est de fournir des plats qui représentent les saveurs de la cuisine classique de notre pays et ainsi fournir une approche de la cuisine catalane.',
+        subtitle1: 'Découvrez nos plats inspirés des ',
+        subtitle2: 'recettes catalanes traditionnelles',
+        subtitle3:
+          '. Notre objectif principal est de fournir des plats qui représentent les saveurs de la cuisine classique de notre pays et ainsi fournir une ',
+        subtitle4: 'approche de la cuisine catalane.',
         dish1: 'Salade d’avocats',
         description1: 'Avec un lit de tomates et des crevettes',
-        dish2: 'CoÉplucheur de canard',
+        dish2: 'Éplucheur de canard',
         description2:
           'Avec un côté de purée de pommes de terre et de pommes de terre',
         dish3: 'Gâteau au chocolat chaud',
@@ -190,8 +220,10 @@ export const textAtom = atom({
       },
       blanes: {
         title: 'Blanes, la première ville de la Costa Brava',
-        subtitle:
-          'Laissez-vous enchanter par la ville qui commence le voyage de la fantastique Costa Brava catalane. Venez profiter d’une journée à la plage, les milliers de sentiers de randonnée et la chaleur de ses habitants.',
+        subtitle1: 'Laissez-vous enchanter par la ville qui ',
+        subtitle2: 'commence le voyage de la fantastique Costa Brava catalane',
+        subtitle3:
+          '. Venez profiter d’une journée à la plage, les milliers de sentiers de randonnée et la chaleur de ses habitants.',
         img1alt: 'détail du mur',
         img2alt: 'voile de bateau',
         img3alt: 'pêcheur pêchant en bord de mer',
@@ -200,8 +232,12 @@ export const textAtom = atom({
       },
       restaurant: {
         title: 'Le restaurant au bord de la mer',
-        subtitle:
-          'Le Sorrall est situé sur le front de mer sur le front de mer, permettant à nos clients une vue privilégiée tout en appréciant les plats que nous servons. Notre équipe de professionnels vous fera sentir à la maison et désireux de nous rendre visite à nouveau.',
+        subtitle1: 'Le Sorrall est situé ',
+        subtitle2: 'sur le front de mer',
+        subtitle3:
+          ', permettant à nos clients une vue privilégiée tout en appréciant les plats que nous servons. Notre équipe de professionnels vous fera ',
+        subtitle4: 'sentir à la maison',
+        subtitle5: ' et désireux de nous rendre visite à nouveau.',
         img1alt: 'groupe d’amis mangeant à une grande table',
         img2alt: 'détail des mains du chef tout en coupant des légumes',
         img3alt: 'détail de la tête du chef concentré',
