@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 import arrowUp from '../../assets/imgs/arrow_up.webp'
 import arrowUpClicked from '../../assets/imgs/arrow_up_clicked.webp'
+import { keyframes } from '@emotion/react'
 
 export default function ArrowUp() {
   const [isVisible, setIsVisible] = useState(false)
@@ -41,14 +42,24 @@ export default function ArrowUp() {
   } else return null
 }
 
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`
+
 const scrollUpStyle = {
+  animation: `${fadeIn} 1s ease;`,
   backgroundColor: '#000D80',
   borderRadius: '100px',
   width: '50px',
   height: '50px',
   position: 'fixed',
-  bottom: 100,
-  right: 100,
+  bottom: 80,
+  right: 80,
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',

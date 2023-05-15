@@ -43,7 +43,7 @@ const selectorStyle = {
   display: 'flex',
   alignItems: 'center',
   '.item': {
-    marginLeft: '1rem',
+    marginRight: '1rem',
     span: {
       color: '#000D80',
       transition: 'all 200ms linear',
