@@ -7,6 +7,7 @@ import Wave from './components/general/Wave'
 import Products from './pages/Products'
 import Blanes from './pages/Blanes'
 import Restaurant from './pages/Restaurant'
+import ArrowUp from './components/general/ArrowUp'
 
 export default function App() {
   const linkRef1 = useRef(null)
@@ -16,6 +17,7 @@ export default function App() {
   return (
     <>
       <Navbar ref1={linkRef1} ref2={linkRef2} ref3={linkRef3} />
+      <ArrowUp />
       <Home />
       <Wave />
       <Products linkRef={linkRef1} />

@@ -1,13 +1,13 @@
 DOING:
-- negritas!!!
+- links en footer ( call, map, etc )
 
 TODOS:
-- boton scrollUp
-- links en footer ( call, map, etc )
 - carta!!!
 - resposnivenesnessness
 
 DONE:
+- boton scrollUp
+- negritas!!!
 - color navbar links
 - add navigation functionality ( go to section on navbar click )
 - test animated wave
