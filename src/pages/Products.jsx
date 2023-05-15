@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
 import facepaint from 'facepaint'
 import { useRecoilValue } from 'recoil'
 
@@ -17,14 +17,18 @@ export default function Products({ linkRef }) {
   const lang = useRecoilValue(languageAtom)
   const text = useRecoilValue(textAtom)
 
+  const [isModalOpen, setShowModal] = useState(false)
+
   return (
     <div css={productsStyle}>
       <div ref={linkRef} className='linkHere' />
       <h2>{text[lang].products.title}</h2>
       <p className='body'>{text[lang].products.subtitle}</p>
       <Grid />
-      <Button className='btnWrapper'>{text[lang].products.button}</Button>
-      <dialog>test</dialog>
+      <Button className='btnWrapper' onClick={() => setShowModal(true)}>
+        {text[lang].products.button}
+      </Button>
+      {isModalOpen && <Modal setShowModal={setShowModal} />}
     </div>
   )
 }
@@ -32,9 +36,8 @@ export default function Products({ linkRef }) {
 const productsStyle = {
   minHeight: '100vh',
   padding: '0 80px',
-  position: 'relative',
   '.linkHere': {
-    position: 'absolute',
+    position: 'relative',
     top: '-7vw',
   },
   h2: {
@@ -85,4 +88,88 @@ const gridStyle = {
       marginBottom: '24px',
     },
   },
+}
+
+const Modal = ({ setShowModal }) => {
+  const escFunction = useCallback((event) => {
+    if (event.key === 'Escape') {
+      setShowModal(false)
+    }
+  }, [])
+
+  useEffect(() => {
+    document.addEventListener('keydown', escFunction, false)
+
+    return () => {
+      document.removeEventListener('keydown', escFunction, false)
+    }
+  }, [escFunction])
+
+  return (
+    <>
+      <div
+        css={blurStyle}
+        onClick={() => setShowModal(false)}
+        className='pointer'
+      />
+      <div onClick={(e) => e.stopPropagation()} css={modalStyle}>
+        <h4 className='first'>Primers</h4>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+          dignissimos, voluptates eos illum modi doloribus at porro, velit
+          blanditiis enim distinctio, quisquam assumenda sapiente iure
+          accusantium repellat rerum? Rem, cumque.
+        </p>
+        <h4 className='titles'>Segons</h4>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
+          provident nihil ullam reprehenderit! Explicabo tenetur, quaerat
+          expedita magnam fugit hic? Animi magni officiis enim totam quia
+          provident expedita rerum veniam.
+        </p>
+        <h4 className='titles'>Postres</h4>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+          minima asperiores quae tempora aliquam quisquam repudiandae sapiente
+          neque ipsa, dolorem iure corrupti? Vero ipsam eos atque distinctio
+          eius quaerat illo.
+        </p>
+      </div>
+    </>
+  )
+}
+
+const modalStyle = {
+  width: '90vw',
+  height: '80vh',
+  position: 'fixed',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  backgroundColor: 'white',
+  border: '1px solid black',
+  color: 'black',
+  zIndex: 200,
+  padding: '50px',
+  borderRadius: '80px',
+  textAlign: 'left',
+
+  '.first': {
+    margin: '0 0 1rem',
+  },
+  '.titles': {
+    margin: '2rem 0 .75rem',
+  },
+}
+
+const blurStyle = {
+  backdropFilter: 'blur(8px)',
+  height: '100vh',
+  width: '100vw',
+  position: 'fixed',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  zIndex: 100,
+  backgroundColor: '#88888678',
 }

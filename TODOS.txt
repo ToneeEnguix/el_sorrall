@@ -1,8 +1,14 @@
 TODOS:
-  - test animated wave
-  - add navigation functionality ( go to section on navbar click )
+- color navbar links
+- negritas!!!
+- boton scrollUp
+- links en footer ( call, map, etc )
+- carta!!!
+- resposnivenesnessness
 
 ELISA:
 
 DONE:
 - add outline to languages
+- test animated wave
+- add navigation functionality ( go to section on navbar click )

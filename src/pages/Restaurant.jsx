@@ -23,9 +23,8 @@ export default function Restaurant({ linkRef }) {
 
 const blanesStyle = {
   marginTop: '150px',
-  position: 'relative',
   '.linkHere': {
-    position: 'absolute',
+    position: 'relative',
     top: '-7vw',
   },
   p: {

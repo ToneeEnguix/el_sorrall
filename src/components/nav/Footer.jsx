@@ -14,7 +14,7 @@ export default function Footer() {
           <h1>
             {text[lang].home.title1} {text[lang].home.title2}
           </h1>
-          <p className='body'>{text[lang].footer.subtitle}</p>
+          <p className='body'>{text[lang].home.subtitle}</p>
         </div>
         <iframe
           src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2980.427919894974!2d2.7841846760558053!3d41.66810087126568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12bb162296f5422d%3A0x9b5eaa7610bc5158!2sRestaurant%20El%20Sorrall!5e0!3m2!1sen!2ses!4v1683712813694!5m2!1sen!2ses'

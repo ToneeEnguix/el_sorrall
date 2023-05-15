@@ -27,8 +27,8 @@ export default function Navbar({ ref1, ref2, ref3 }) {
       </div>
       <div className='right'>
         <Link onClick={scrollToSection1}>{text[lang].navbar.menu}</Link>
-        <Link onClick={scrollToSection2}>{text[lang].navbar.who}</Link>
-        <Link onClick={scrollToSection3}>{text[lang].navbar.where}</Link>
+        <Link onClick={scrollToSection2}>{text[lang].navbar.where}</Link>
+        <Link onClick={scrollToSection3}>{text[lang].navbar.who}</Link>
         {/* <Link onClick={scrollToSection4}>{text[lang].navbar.contact}</Link> */}
         <Button>{text[lang].navbar.reserve}</Button>
       </div>

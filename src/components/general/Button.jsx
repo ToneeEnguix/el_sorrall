@@ -2,7 +2,11 @@ import React from 'react'
 
 export default function Button(props) {
   return (
-    <button className={`pointer white ${props.className}`} css={buttonStyle}>
+    <button
+      className={`pointer white ${props.className}`}
+      css={buttonStyle}
+      onClick={props.onClick}
+    >
       {props.children}
     </button>
   )

@@ -49,6 +49,14 @@ h3 {
   margin: 0 0 32px;
   letter-spacing: 2px;
 }
+h4 {
+  font-family: 'Pirata';
+  font-size: 32px;
+  font-weight: 400;
+  color: #cac6ba;
+  /* margin: 0 0 32px; */
+  letter-spacing: 2px;
+}
 
 .subtitle {
   font-weight: 400;
