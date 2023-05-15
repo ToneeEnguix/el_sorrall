@@ -59,6 +59,6 @@ const selectorStyle = {
     },
   },
   '.active': {
-    color: '#FDF8E7 !important',
+    color: '#59609d !important',
   },
 }
