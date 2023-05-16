@@ -62,6 +62,7 @@ const scrollUpStyle = {
   justifyContent: 'center',
   transition: 'all 200ms linear',
   border: '1px solid #000D80',
+  zIndex: 2,
   ':hover': {
     backgroundColor: '#FDF8E7',
     border: '1px solid #000D80',

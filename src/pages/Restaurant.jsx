@@ -1,6 +1,8 @@
 import React from 'react'
 import { useRecoilValue } from 'recoil'
 import facepaint from 'facepaint'
+import Carousel from 'react-multi-carousel'
+import 'react-multi-carousel/lib/styles.css'
 
 import { languageAtom, textAtom } from '../state/atoms'
 
@@ -27,7 +29,8 @@ export default function Restaurant({ linkRef }) {
         <b>{text[lang].restaurant.subtitle4}</b>
         {text[lang].restaurant.subtitle5}
       </p>
-      <Pics />
+      <Pics lang={lang} text={text} />
+      <MobileCarousel lang={lang} text={text} />{' '}
     </div>
   )
 }
@@ -40,16 +43,19 @@ const blanesStyle = mq({
   },
   p: {
     width: ['70%', '70%', '51%'],
-    margin: '0 auto',
+    margin: '0 auto 48px',
+  },
+  '.desktop': {
+    display: ['none', 'none', 'flex'],
+  },
+  '.tablet': {
+    display: ['block', 'none'],
   },
 })
 
-const Pics = () => {
-  const lang = useRecoilValue(languageAtom)
-  const text = useRecoilValue(textAtom)
-
+const Pics = ({ text, lang }) => {
   return (
-    <div css={picsStyle}>
+    <div css={picsStyle} className='desktop'>
       <div>
         <img alt={text[lang].restaurant.img1alt} src={img1} />
       </div>
@@ -64,7 +70,6 @@ const Pics = () => {
 }
 
 const picsStyle = {
-  marginTop: '48px',
   display: 'grid',
   gridTemplateColumns: '2fr repeat(2, 1fr)',
   height: '416px',
@@ -75,5 +80,47 @@ const picsStyle = {
       height: '100%',
       objectFit: 'cover',
     },
+  },
+}
+
+const MobileCarousel = ({ lang, text }) => {
+  const responsive = {
+    tablet: {
+      breakpoint: { max: 1000, min: 700 },
+      items: 2.5,
+      slidesToSlide: 1, // optional, default to 1.
+    },
+    mobile: {
+      breakpoint: { max: 700, min: 0 },
+      items: 1.8,
+      slidesToSlide: 1, // optional, default to 1.
+    },
+  }
+
+  return (
+    <div css={mobileCarouselStyle} className='tablet'>
+      <Carousel responsive={responsive} infinite={true}>
+        <div>
+          <img alt={text[lang].blanes.img1alt} src={img1} />
+        </div>
+        <div>
+          <img alt={text[lang].blanes.img2alt} src={img2} />
+        </div>
+        <div>
+          <img alt={text[lang].blanes.img3alt} src={img3} />
+        </div>
+      </Carousel>
+    </div>
+  )
+}
+
+const mobileCarouselStyle = {
+  div: {
+    padding: '0 0 0 25px',
+  },
+  img: {
+    height: '418px',
+    objectFit: 'cover',
+    // marginLeft: '50px',
   },
 }

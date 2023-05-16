@@ -1,16 +1,17 @@
 DOING:
 - resposnivenesnessness
-  - caroussels
+  - footer
 
 TODOS:
 - image optimization
-- re-visit footer
 - alt de olita movil
 
 TODO, BUT NOT YET:
 - carta!!!
 
 DONE:
+- resposnivenesnessness
+  - caroussels
 - cambiar imagen pastel xoco
 - difuminado de entrada de scroll up btn
 - links en footer ( call, map, etc )
