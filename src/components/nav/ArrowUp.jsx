@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
+import { keyframes } from '@emotion/react'
+import { animateScroll } from 'react-scroll'
 
 import arrowUp from '../../assets/imgs/arrow_up.webp'
 import arrowUpClicked from '../../assets/imgs/arrow_up_clicked.webp'
-import { keyframes } from '@emotion/react'
 
 export default function ArrowUp() {
   const [isVisible, setIsVisible] = useState(false)
@@ -23,18 +24,14 @@ export default function ArrowUp() {
     }
   }
 
+  const scrollUp = () => {
+    const offsetY = window.scrollY
+    animateScroll.scrollToTop({ duration: offsetY - offsetY * 0.4 })
+  }
+
   if (isVisible) {
     return (
-      <div
-        css={scrollUpStyle}
-        onClick={() =>
-          window.scrollTo({
-            top: 0,
-            behavior: 'smooth',
-          })
-        }
-        className='pointer'
-      >
+      <div css={scrollUpStyle} onClick={scrollUp} className='pointer'>
         <img className='fixed' alt='scroll up' src={arrowUp} />
         <img className='clicked' alt='scroll up' src={arrowUpClicked} />
       </div>

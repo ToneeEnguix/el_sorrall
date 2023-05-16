@@ -1,12 +1,14 @@
 DOING:
-- cambiar imagen pastel xoco
-- carta!!!
+- resposnivenesnessness
 
 TODOS:
-- resposnivenesnessness
 - image optimization
 
+TODO, BUT NOT YET:
+- carta!!!
+
 DONE:
+- cambiar imagen pastel xoco
 - difuminado de entrada de scroll up btn
 - links en footer ( call, map, etc )
 - boton scrollUp

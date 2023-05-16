@@ -7,7 +7,7 @@ import Wave from './components/general/Wave'
 import Products from './pages/Products'
 import Blanes from './pages/Blanes'
 import Restaurant from './pages/Restaurant'
-import ArrowUp from './components/general/ArrowUp'
+import ArrowUp from './components/nav/ArrowUp'
 
 export default function App() {
   const linkRef1 = useRef(null)
