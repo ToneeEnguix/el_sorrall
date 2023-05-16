@@ -1,5 +1,6 @@
 import React from 'react'
 import { useRecoilValue } from 'recoil'
+import facepaint from 'facepaint'
 
 import { languageAtom, textAtom } from '../state/atoms'
 
@@ -7,6 +8,10 @@ import img1 from '../assets/imgs/blanes_1.webp'
 import img2 from '../assets/imgs/blanes_2.webp'
 import img3 from '../assets/imgs/blanes_3.webp'
 import img4 from '../assets/imgs/blanes_4.webp'
+
+// RESPONSIVENESS SETTINGS
+const breakpoints = [800, 1000]
+const mq = facepaint(breakpoints.map((bp) => `@media (min-width: ${bp}px)`))
 
 export default function Blanes({ linkRef }) {
   const lang = useRecoilValue(languageAtom)
@@ -26,17 +31,17 @@ export default function Blanes({ linkRef }) {
   )
 }
 
-const blanesStyle = {
+const blanesStyle = mq({
   marginTop: '150px',
   '.linkHere': {
     position: 'relative',
     top: '-7vw',
   },
   p: {
-    width: '51%',
+    width: ['70%', '70%', '51%'],
     margin: '0 auto',
   },
-}
+})
 
 const Pics = () => {
   const lang = useRecoilValue(languageAtom)

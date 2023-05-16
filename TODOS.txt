@@ -1,8 +1,11 @@
 DOING:
 - resposnivenesnessness
+  - caroussels
 
 TODOS:
 - image optimization
+- re-visit footer
+- alt de olita movil
 
 TODO, BUT NOT YET:
 - carta!!!

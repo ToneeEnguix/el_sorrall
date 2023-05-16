@@ -36,6 +36,13 @@ h1 {
   text-align: left;
 }
 
+.home_subtitle {
+  font-family: 'JakartaSans';
+  letter-spacing: 1px;
+  font-size: 40px;
+  font-weight: 600;
+}
+
 h2 {
   font-family: 'Pirata';
   font-size: 88px;
@@ -61,11 +68,6 @@ h4 {
   /* margin: 0 0 32px; */
   letter-spacing: 2px;
 }
-
-.subtitle {
-  font-weight: 400;
-  font-size: 32px;
-}
 .body {
   font-weight: 400;
   font-size: 16px;
@@ -89,9 +91,13 @@ button {
 .white {
   color: #fcfbf8;
 }
-
 .pointer {
   cursor: pointer;
+}
+.flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Imgs */
@@ -123,4 +129,15 @@ button {
   src: local('JakartaSans'),
     url('./assets/fonts/PlusJakartaSans-VariableFont_wght.ttf')
       format('truetype');
+}
+
+/* MEDIA QUERIES */
+@media all and (max-width: 1000px) {
+  h2 {
+    font-size: 80px;
+  }
+  h3 {
+    width: 80%;
+    margin: 0 auto 32px;
+  }
 }

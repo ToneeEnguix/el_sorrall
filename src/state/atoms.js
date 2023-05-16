@@ -79,7 +79,7 @@ export const textAtom = atom({
       home: {
         title1: 'Restaurante',
         title2: 'El Sorrall',
-        subtitle: 'Gastronomia catalana',
+        subtitle: 'Gastronomía catalana',
       },
       products: {
         title: 'Nuestros platos caseros',
@@ -138,9 +138,9 @@ export const textAtom = atom({
         reserve: 'Reserve',
       },
       home: {
-        title1: 'Restaurant',
-        title2: 'El Sorrall',
-        subtitle: 'Gastronomia catalana',
+        title1: 'El Sorrall',
+        title2: 'Restaurant',
+        subtitle: 'Catalan gastronomy',
       },
       products: {
         title: 'Our Homemade Dishes',
@@ -200,7 +200,7 @@ export const textAtom = atom({
       home: {
         title1: 'Restaurant',
         title2: 'El Sorrall',
-        subtitle: 'Gastronomia catalana',
+        subtitle: 'Gastronomie catalane',
       },
       products: {
         title: 'Nos plats faits maisonlats casolans',

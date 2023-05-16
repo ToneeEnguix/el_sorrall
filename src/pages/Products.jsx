@@ -10,7 +10,7 @@ import img3 from '../assets/imgs/products_3.webp'
 import { languageAtom, textAtom } from '../state/atoms'
 
 // RESPONSIVENESS SETTINGS
-const breakpoints = [600, 800, 1300, 1800]
+const breakpoints = [800, 1000]
 const mq = facepaint(breakpoints.map((bp) => `@media (min-width: ${bp}px)`))
 
 export default function Products({ linkRef }) {
@@ -38,9 +38,9 @@ export default function Products({ linkRef }) {
   )
 }
 
-const productsStyle = {
+const productsStyle = mq({
   minHeight: '100vh',
-  padding: '0 80px',
+  padding: ['0 40px', '0 40px', '0 80px'],
   '.linkHere': {
     position: 'relative',
     top: '-7vw',
@@ -49,13 +49,13 @@ const productsStyle = {
     margin: 0,
   },
   '> .body': {
-    width: '45%',
+    width: ['70%', '70%', '45%'],
     margin: '32px auto 0',
   },
   '.btnWrapper': {
     marginTop: '78px',
   },
-}
+})
 
 const Grid = () => {
   const lang = useRecoilValue(languageAtom)

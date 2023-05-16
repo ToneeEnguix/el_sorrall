@@ -1,3 +1,4 @@
+import React from 'react'
 import { useRecoilState } from 'recoil'
 
 import { languageAtom } from '../../state/atoms'
@@ -7,7 +8,7 @@ import SpanishFlag from '../../assets/imgs/spain.png'
 import EnglishFlag from '../../assets/imgs/united-kingdom.png'
 import FrenchFlag from '../../assets/imgs/france.png'
 
-export default function LanguageSelector() {
+export default function LanguageSelectorMobile() {
   const [languageRecoil, setLanguageRecoil] = useRecoilState(languageAtom)
 
   return (
@@ -20,12 +21,10 @@ export default function LanguageSelector() {
             key={lang}
             tabIndex='0'
           >
-            <span
-              className={`white ${lang === languageRecoil ? 'active' : ''}`}
-            >
+            <p className={`${lang === languageRecoil ? 'active' : ''}`}>
               {languages[lang].txt}
-            </span>
-            <hr className={lang === languageRecoil ? `bg-${lang}` : ''}></hr>
+            </p>
+            {/* <hr className={lang === languageRecoil ? `bg-${lang}` : ''}></hr> */}
           </div>
         )
       })}
@@ -33,33 +32,15 @@ export default function LanguageSelector() {
   )
 }
 
+const selectorStyle = {
+  // span: {
+  // color: '#000D80',
+  // },
+}
+
 const languages = {
   catalan: { icon: CatalanFlag, txt: 'CAT' },
   english: { icon: EnglishFlag, txt: 'EN' },
   spanish: { icon: SpanishFlag, txt: 'ES' },
   french: { icon: FrenchFlag, txt: 'FR' },
-}
-
-const selectorStyle = {
-  display: 'flex',
-  alignItems: 'center',
-  '.item': {
-    marginRight: '16px',
-    span: {
-      color: '#000D80',
-      transition: 'all 200ms linear',
-      ':hover': {
-        color: '#59609d',
-      },
-    },
-    hr: {
-      margin: 0,
-      height: '3px',
-      border: 'none',
-      backgroundSize: 'cover',
-    },
-  },
-  '.active': {
-    color: '#59609d !important',
-  },
 }
