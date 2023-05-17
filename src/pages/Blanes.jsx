@@ -48,7 +48,7 @@ const blanesStyle = mq({
     display: ['none', 'none', 'flex'],
   },
   '.tablet': {
-    display: ['block', 'none'],
+    display: ['block', 'block', 'none'],
   },
 })
 
@@ -89,19 +89,24 @@ const MobileCarousel = ({ lang, text }) => {
   const responsive = {
     tablet: {
       breakpoint: { max: 1000, min: 700 },
-      items: 2.5,
+      items: 1.4,
       slidesToSlide: 1, // optional, default to 1.
     },
     mobile: {
-      breakpoint: { max: 700, min: 0 },
-      items: 1.8,
+      breakpoint: { max: 700, min: 500 },
+      items: 1,
+      slidesToSlide: 1, // optional, default to 1.
+    },
+    mini: {
+      breakpoint: { max: 500, min: 0 },
+      items: 0.5,
       slidesToSlide: 1, // optional, default to 1.
     },
   }
 
   return (
     <div css={mobileCarouselStyle} className='tablet'>
-      <Carousel responsive={responsive} infinite={true}>
+      <Carousel responsive={responsive} infinite={true} centerMode={true}>
         <div>
           <img alt={text[lang].blanes.img1alt} src={img1} />
         </div>
@@ -126,6 +131,5 @@ const mobileCarouselStyle = {
   img: {
     height: '418px',
     objectFit: 'cover',
-    // marginLeft: '50px',
   },
 }

@@ -4,12 +4,16 @@ DOING:
 
 TODOS:
 - image optimization
-- alt de olita movil
+- boton llamada en movil
+- carousel items selector/indicator
 
 TODO, BUT NOT YET:
 - carta!!!
 
 DONE:
+- boton hover styling
+- alt de olita movil
+- carousel bigger images
 - resposnivenesnessness
   - caroussels
 - cambiar imagen pastel xoco

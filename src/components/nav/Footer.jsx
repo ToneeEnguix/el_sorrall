@@ -1,6 +1,14 @@
 import { useRecoilValue } from 'recoil'
+import facepaint from 'facepaint'
 
 import { languageAtom, textAtom } from '../../state/atoms'
+
+import fbLogo from '../../assets/imgs/fb.webp'
+import igLogo from '../../assets/imgs/ig.webp'
+
+// RESPONSIVENESS SETTINGS
+const breakpoints = [800, 1000]
+const mq = facepaint(breakpoints.map((bp) => `@media (min-width: ${bp}px)`))
 
 export default function Footer() {
   const lang = useRecoilValue(languageAtom)
@@ -16,15 +24,16 @@ export default function Footer() {
         <div className='icons'>
           <div className='flexCenter'>
             <img
-              src='https://img.icons8.com/fluency/48/instagram-new.png'
+              // src='https://img.icons8.com/fluency/48/instagram-new.png'
+              src={fbLogo}
               alt='instagram'
             />
           </div>
           <div className='flexCenter'>
             <img
-              src='https://img.icons8.com/fluency/48/facebook-new.png'
+              // src='https://img.icons8.com/fluency/48/facebook-new.png'
+              src={igLogo}
               alt='facebook'
-              className='fb'
             />
           </div>
         </div>
@@ -63,7 +72,7 @@ export default function Footer() {
   )
 }
 
-const footerStyle = {
+const footerStyle = mq({
   marginTop: '180px',
   backgroundColor: '#4A4740',
   display: 'flex',
@@ -102,6 +111,7 @@ const footerStyle = {
       img: {
         width: '54px',
         height: '54px',
+        marginRight: '1rem',
       },
       '.fb': {
         width: '48px',
@@ -110,7 +120,7 @@ const footerStyle = {
     },
   },
   '.mid': {
-    margin: '0 1rem',
+    margin: ['1rem 0 0', '0 1rem'],
     width: 'fit-content',
     display: 'flex',
     flexDirection: 'column',
@@ -133,4 +143,4 @@ const footerStyle = {
       fontWeight: 400,
     },
   },
-}
+})

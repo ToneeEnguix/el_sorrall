@@ -15,13 +15,14 @@ export default function Button(props) {
 const buttonStyle = {
   backgroundColor: '#050E80',
   borderRadius: '100px',
-  border: 'none',
+  border: '1px solid #050E80',
   padding: '0 2.5rem',
   height: '48px',
   transition: 'all 200ms linear',
   marginLeft: '1.75rem',
   letterSpacing: '1px',
   ':hover': {
-    backgroundColor: 'yellow',
+    backgroundColor: '#FCFBF8',
+    color: '#000D80',
   },
 }

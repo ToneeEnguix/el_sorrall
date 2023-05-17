@@ -49,11 +49,11 @@ const productsStyle = mq({
     margin: 0,
   },
   '> .body': {
-    width: ['70%', '70%', '45%'],
+    width: ['100%', '70%', '45%'],
     margin: '32px auto 0',
   },
   '.btnWrapper': {
-    marginTop: '78px',
+    marginTop: [0, '78px'],
   },
 })
 
@@ -91,6 +91,7 @@ const gridStyle = mq({
   gridTemplateColumns: 'repeat(3, 1fr)',
   gap: '16px',
   div: {
+    marginBottom: ['32px', 0],
     img: {
       borderRadius: '24px',
       marginBottom: '24px',

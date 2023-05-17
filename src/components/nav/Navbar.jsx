@@ -10,7 +10,7 @@ import Button from '../general/Button'
 import burger from '../../assets/imgs/burger.webp'
 import burgerOpen from '../../assets/imgs/burger_open.webp'
 import LanguageSelectorMobile from './LanguageSelectorMobile'
-// import mobileMenuWave from '../../assets/imgs/mobile_menu_wave.webp'
+import mobileMenuWave from '../../assets/imgs/mobile-menu-wave.webp'
 
 // RESPONSIVENESS SETTINGS
 const breakpoints = [800, 1000]
@@ -68,7 +68,7 @@ export default function Navbar({ ref1, ref2, ref3 }) {
           <img
             className='open'
             src={burgerOpen}
-            alt='menu burger'
+            alt='menu burger open'
             onClick={toggleMenu}
             style={{ opacity: isMenuOpen ? 1 : 0, zIndex: 1 }}
           />
@@ -91,14 +91,14 @@ export default function Navbar({ ref1, ref2, ref3 }) {
   )
 }
 
-const fadeIn = keyframes`
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-`
+// const fadeIn = keyframes`
+//   0% {
+//     opacity: 0;
+//   }
+//   100% {
+//     opacity: 1;
+//   }
+// `
 
 const navbarStyle = mq({
   width: '100vw',
@@ -129,12 +129,12 @@ const navbarStyle = mq({
     left: '50%',
     right: '50%',
     '.open, .closed': {
-      height: '26px',
-      width: 'auto',
-      webkitTransition: 'opacity 500ms ease-in-out',
-      mozTransition: 'opacity 500ms ease-in-out',
-      oTransition: 'opacity 500ms ease-in-out',
-      transition: 'opacity 500ms ease-in-out',
+      height: 'auto',
+      width: '26px',
+      // webkitTransition: 'opacity 500ms ease-in-out',
+      // mozTransition: 'opacity 500ms ease-in-out',
+      // oTransition: 'opacity 500ms ease-in-out',
+      // transition: 'opacity 500ms ease-in-out',
       position: 'absolute',
       top: 16,
     },
@@ -167,27 +167,28 @@ const MobileMenu = ({ lang, text }) => {
       <p tabIndex='0'>{text[lang].navbar.where}</p>
       <p tabIndex='0'>{text[lang].navbar.who}</p>
       <p tabIndex='0'>{text[lang].navbar.reserve}</p>
-      {/* <img src={mobileMenuWave} alt='detalle olita movil' /> */}
+      <img src={mobileMenuWave} alt='wave decoration' />
       <LanguageSelectorMobile />
     </div>
   )
 }
 
 const mobileMenuStyle = {
-  animation: `${fadeIn} 1s ease;`,
+  // animation: `${fadeIn} 1s ease;`,
   position: 'fixed',
   top: 72,
   margin: '0 auto',
   left: 0,
   right: 0,
   width: '50vw',
+  minWidth: '240px',
   backgroundColor: '#FCFBF8E5',
   borderRadius: '0 0 32px 32px',
   padding: '40px',
   color: '#000D80',
   fontWeight: 600,
   zIndex: 10,
-  p: {
+  'p, img': {
     marginBottom: '1.25rem',
   },
 }
