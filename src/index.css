@@ -5,7 +5,7 @@
 }
 
 body {
-  letter-spacing: '1px';
+  letter-spacing: 1px;
   font-family: 'JakartaSans';
   background: #fcfbf8;
   text-align: center;
@@ -34,6 +34,7 @@ h1 {
   margin: 0;
   letter-spacing: 2px;
   text-align: left;
+  line-height: 156px;
 }
 
 .home_subtitle {
@@ -139,5 +140,18 @@ button {
   h3 {
     width: 80%;
     margin: 0 auto 32px;
+  }
+}
+
+@media all and (max-width: 800px) {
+  h1 {
+    font-size: 80px;
+    line-height: 90px;
+  }
+  h2 {
+    font-size: 50px;
+  }
+  h3 {
+    font-size: 40px;
   }
 }

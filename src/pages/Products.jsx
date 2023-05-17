@@ -82,9 +82,12 @@ const Grid = () => {
   )
 }
 
-const gridStyle = {
+const gridStyle = mq({
   marginTop: '48px',
-  display: 'grid',
+  display: ['flex', 'grid'],
+  // flexDirection: ""
+  justifyContent: 'center',
+  flexWrap: 'wrap',
   gridTemplateColumns: 'repeat(3, 1fr)',
   gap: '16px',
   div: {
@@ -93,7 +96,7 @@ const gridStyle = {
       marginBottom: '24px',
     },
   },
-}
+})
 
 const Modal = ({ setShowModal }) => {
   const escFunction = useCallback((event) => {

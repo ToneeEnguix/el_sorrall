@@ -4,7 +4,7 @@ import facepaint from 'facepaint'
 import { languageAtom, textAtom } from '../state/atoms'
 
 // RESPONSIVENESS SETTINGS
-const breakpoints = [800, 1000]
+const breakpoints = [600, 800, 1000]
 const mq = facepaint(breakpoints.map((bp) => `@media (min-width: ${bp}px)`))
 
 export default function Home() {
@@ -28,15 +28,14 @@ const homeStyle = mq({
   flexDirection: 'column',
   textAlign: 'left',
   padding: [
-    'calc(96px + 40px) 0 0 40px',
-    'calc(96px + 40px) 0 0 40px',
+    'calc(96px + 80px) 0 0 20px',
+    'calc(96px + 80px) 0 0 40px',
+    'calc(96px + 60px) 0 0 40px',
     'calc(96px + 40px) 0 0 80px',
   ],
-  h1: {
-    lineHeight: '156px',
-  },
   h3: {
     color: '#fdf8e7',
     margin: 0,
+    fontSize: ['20px', '40px', '46px'],
   },
 })
