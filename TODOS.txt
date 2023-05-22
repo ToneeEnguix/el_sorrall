@@ -3,9 +3,9 @@ DOING:
   - footer
 
 TODOS:
-- image optimization
 - boton llamada en movil
 - carousel items selector/indicator
+- image optimization
 
 TODO, BUT NOT YET:
 - carta!!!
