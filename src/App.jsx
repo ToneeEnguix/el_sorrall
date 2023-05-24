@@ -8,6 +8,7 @@ import Products from './pages/Products'
 import Blanes from './pages/Blanes'
 import Restaurant from './pages/Restaurant'
 import ArrowUp from './components/nav/ArrowUp'
+import PhoneBtn from './components/general/PhoneBtn'
 
 export default function App() {
   const linkRef1 = useRef(null)
@@ -18,6 +19,7 @@ export default function App() {
     <>
       <Navbar ref1={linkRef1} ref2={linkRef2} ref3={linkRef3} />
       <ArrowUp />
+      <PhoneBtn />
       <Home />
       <Wave />
       <Products linkRef={linkRef1} />

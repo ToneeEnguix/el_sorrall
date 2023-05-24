@@ -154,7 +154,7 @@ const linkStyle = {
   textDecoration: 'none',
   transition: 'all 200ms linear',
   letterSpacing: '.05rem',
-  color: '#000D80',
+  color: '#000F24',
   ':hover': {
     color: '#59609d',
   },

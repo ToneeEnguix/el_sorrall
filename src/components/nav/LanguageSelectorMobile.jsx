@@ -24,7 +24,6 @@ export default function LanguageSelectorMobile() {
             <p className={`${lang === languageRecoil ? 'active' : ''}`}>
               {languages[lang].txt}
             </p>
-            {/* <hr className={lang === languageRecoil ? `bg-${lang}` : ''}></hr> */}
           </div>
         )
       })}

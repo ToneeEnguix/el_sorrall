@@ -1,21 +1,22 @@
 DOING:
-- resposnivenesnessness
-  - footer
+- button gradient => falta HOVER
+- mobile menu
 
 TODOS:
-- boton llamada en movil
 - carousel items selector/indicator
+- carta
 - image optimization
 
-TODO, BUT NOT YET:
-- carta!!!
 
 DONE:
+- boton llamada en movil
+- new navbar
+- change dish image
+- new wave
 - boton hover styling
 - alt de olita movil
 - carousel bigger images
 - resposnivenesnessness
-  - caroussels
 - cambiar imagen pastel xoco
 - difuminado de entrada de scroll up btn
 - links en footer ( call, map, etc )

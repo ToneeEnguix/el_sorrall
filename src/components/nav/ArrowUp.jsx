@@ -1,9 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { keyframes } from '@emotion/react'
 import { animateScroll } from 'react-scroll'
+import facepaint from 'facepaint'
 
 import arrowUp from '../../assets/imgs/arrow_up.webp'
 import arrowUpClicked from '../../assets/imgs/arrow_up_clicked.webp'
+
+// RESPONSIVENESS SETTINGS
+const breakpoints = [800, 1000]
+const mq = facepaint(breakpoints.map((bp) => `@media (min-width: ${bp}px)`))
 
 export default function ArrowUp() {
   const [isVisible, setIsVisible] = useState(false)
@@ -48,16 +53,16 @@ const fadeIn = keyframes`
   }
 `
 
-const scrollUpStyle = {
+const scrollUpStyle = mq({
   animation: `${fadeIn} 1s ease;`,
   backgroundColor: '#000D80',
   borderRadius: '100px',
   width: '50px',
   height: '50px',
   position: 'fixed',
-  bottom: 80,
+  bottom: [170, 140, 80],
   right: 80,
-  display: 'flex',
+  display: ['none', 'flex'],
   alignItems: 'center',
   justifyContent: 'center',
   transition: 'all 200ms linear',
@@ -80,4 +85,4 @@ const scrollUpStyle = {
   '.clicked': {
     display: 'none',
   },
-}
+})

@@ -65,23 +65,17 @@ export default function Footer() {
 const footerStyle = mq({
   marginTop: '180px',
   backgroundColor: '#000B1A',
-  // display: 'flex',
   display: 'grid',
   gridTemplateColumns: ['1fr', 'auto auto 45%'],
-  // justifyContent: 'space-between',
   gap: '1rem',
   justifyItems: 'center',
   padding: '60px 50px 75px',
   justifyItems: ['center', 'left'],
-  // flexWrap: 'wrap',
   textAlign: ['center', 'left', 'left'],
   p: {
-    //   marginBottom: '.75rem',
     color: '#fdf8e7',
-    //   fontWeight: 200,
     fontSize: '15px',
     lineHeight: '1.8rem',
-    //   textAlign: 'left',
     letterSpacing: '.01rem',
   },
   '.left': {
@@ -90,23 +84,11 @@ const footerStyle = mq({
       display: 'flex',
       flexWrap: 'wrap',
     },
-    //   display: 'flex',
-    //   justifyContent: 'space-between',
-    //   flexDirection: 'column',
-    //   color: '#fdf8e7',
-    //   textAlign: 'left',
-    //   marginTop: '-5px',
-    //   minWidth: '120px',
-    //   maxWidth: '140px',
     h1: {
       fontSize: '2rem',
       letterSpacing: '.06rem',
       lineHeight: '2.3rem',
     },
-    //   p: {
-    //     fontSize: '.7rem',
-    //     marginTop: '10px',
-    //     color: '#fdf8e7',
   },
   '.icons1': {
     display: ['none', 'flex'],
@@ -116,34 +98,16 @@ const footerStyle = mq({
       margin: '1rem 1rem 0 0',
       borderRadius: '100px',
     },
-    //     '.fb': {
-    //       width: '48px',
-    //       height: '48px',
-    //     },
   },
-  //   },
   '.mid': {
-    // margin: ['1rem 0 0', '0 1rem'],
-    //   width: 'fit-content',
-    //   display: 'flex',
-    //   flexDirection: 'column',
-    //   justifyContent: 'space-between',
-    //   order: [1, 2, 3],
     width: ['auto', 'auto', '310px'],
     iframe: {
       width: ['240px', '240px', '300px'],
       height: '100%',
       borderRadius: '12px',
-      //     marginBottom: '.75rem',
     },
   },
   '.right': {
-    //   order: [1, 2, 3],
-    //   width: 'fit-content',
-    //   display: 'flex',
-    //   justifyContent: 'space-between',
-    //   flexDirection: 'column',
-    //   textAlign: 'left',
     '.small': {
       fontWeight: 400,
       fontStyle: 'italic',
@@ -158,10 +122,6 @@ const footerStyle = mq({
       margin: '1rem 1rem 0 0',
       borderRadius: '100px',
     },
-    //     '.fb': {
-    //       width: '48px',
-    //       height: '48px',
-    //     },
   },
 })
 

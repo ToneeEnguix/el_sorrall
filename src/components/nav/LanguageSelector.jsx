@@ -46,7 +46,7 @@ const selectorStyle = {
   '.item': {
     marginRight: '16px',
     span: {
-      color: '#000D80',
+      color: '#000F24',
       transition: 'all 200ms linear',
       ':hover': {
         color: '#59609d',
@@ -60,6 +60,9 @@ const selectorStyle = {
     },
   },
   '.active': {
-    color: '#59609d !important',
+    color: '#FCFBF8 !important',
+    backgroundColor: '#000D80',
+    borderRadius: '24px',
+    padding: '3px 8px',
   },
 }
