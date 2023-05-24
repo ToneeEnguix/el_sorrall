@@ -1,10 +1,9 @@
 import React from 'react'
 import { useRecoilValue } from 'recoil'
 import facepaint from 'facepaint'
-import Carousel from 'react-multi-carousel'
-import 'react-multi-carousel/lib/styles.css'
 
 import { languageAtom, textAtom } from '../state/atoms'
+import Carousel from '../components/general/Carousel'
 
 import img1 from '../assets/imgs/restaurant_1.webp'
 import img2 from '../assets/imgs/restaurant_2.webp'
@@ -84,34 +83,16 @@ const picsStyle = {
 }
 
 const MobileCarousel = ({ lang, text }) => {
-  const responsive = {
-    tablet: {
-      breakpoint: { max: 1000, min: 700 },
-      items: 1.4,
-      slidesToSlide: 1, // optional, default to 1.
-    },
-    mobile: {
-      breakpoint: { max: 700, min: 500 },
-      items: 1,
-      slidesToSlide: 1, // optional, default to 1.
-    },
-    mini: {
-      breakpoint: { max: 500, min: 0 },
-      items: 0.5,
-      slidesToSlide: 1, // optional, default to 1.
-    },
-  }
-
   return (
     <div css={mobileCarouselStyle} className='tablet'>
-      <Carousel responsive={responsive} infinite={true} centerMode={true}>
-        <div>
+      <Carousel>
+        <div className='imgContainer'>
           <img alt={text[lang].blanes.img1alt} src={img1} />
         </div>
-        <div>
+        <div className='imgContainer'>
           <img alt={text[lang].blanes.img2alt} src={img2} />
         </div>
-        <div>
+        <div className='imgContainer'>
           <img alt={text[lang].blanes.img3alt} src={img3} />
         </div>
       </Carousel>
@@ -120,12 +101,7 @@ const MobileCarousel = ({ lang, text }) => {
 }
 
 const mobileCarouselStyle = {
-  div: {
+  '.imgContainer': {
     padding: '0 0 0 25px',
-  },
-  img: {
-    height: '418px',
-    objectFit: 'cover',
-    // marginLeft: '50px',
   },
 }

@@ -1,10 +1,9 @@
 import React from 'react'
 import { useRecoilValue } from 'recoil'
 import facepaint from 'facepaint'
-import Carousel from 'react-multi-carousel'
-import 'react-multi-carousel/lib/styles.css'
 
 import { languageAtom, textAtom } from '../state/atoms'
+import Carousel from '../components/general/Carousel'
 
 import img1 from '../assets/imgs/blanes_1.webp'
 import img2 from '../assets/imgs/blanes_2.webp'
@@ -50,6 +49,9 @@ const blanesStyle = mq({
   '.tablet': {
     display: ['block', 'block', 'none'],
   },
+  '.imgContainer': {
+    padding: '0 0 0 25px',
+  },
 })
 
 const Pics = ({ lang, text }) => {
@@ -86,73 +88,20 @@ const picsStyle = {
 }
 
 const MobileCarousel = ({ lang, text }) => {
-  const responsive = {
-    tablet: {
-      breakpoint: { max: 1000, min: 700 },
-      items: 1.4,
-      slidesToSlide: 1, // optional, default to 1.
-    },
-    mobile: {
-      breakpoint: { max: 700, min: 500 },
-      items: 1,
-      slidesToSlide: 1, // optional, default to 1.
-    },
-    mini: {
-      breakpoint: { max: 500, min: 0 },
-      items: 0.5,
-      slidesToSlide: 1, // optional, default to 1.
-    },
-  }
-
   return (
-    <div css={mobileCarouselStyle} className='tablet'>
-      <Carousel
-        responsive={responsive}
-        infinite={true}
-        centerMode={true}
-        customRightArrow={<CustomRightArrow />}
-        customLeftArrow={<CustomLeftArrow />}
-      >
-        <div>
-          <img alt={text[lang].blanes.img1alt} src={img1} />
-        </div>
-        <div>
-          <img alt={text[lang].blanes.img2alt} src={img2} />
-        </div>
-        <div>
-          <img alt={text[lang].blanes.img3alt} src={img3} />
-        </div>
-        <div>
-          <img alt={text[lang].blanes.img4alt} src={img4} />
-        </div>
-      </Carousel>
-    </div>
+    <Carousel>
+      <div className='imgContainer'>
+        <img alt={text[lang].blanes.img1alt} src={img1} />
+      </div>
+      <div className='imgContainer'>
+        <img alt={text[lang].blanes.img2alt} src={img2} />
+      </div>
+      <div className='imgContainer'>
+        <img alt={text[lang].blanes.img3alt} src={img3} />
+      </div>
+      <div className='imgContainer'>
+        <img alt={text[lang].blanes.img4alt} src={img4} />
+      </div>
+    </Carousel>
   )
-}
-
-const mobileCarouselStyle = {
-  div: {
-    padding: '0 0 0 25px',
-  },
-  img: {
-    height: '418px',
-    objectFit: 'cover',
-  },
-  '.arrow': {
-    position: 'absolute',
-  },
-  '.left': {
-    left: 100,
-  },
-  '.right': {
-    right: 100,
-  },
-}
-
-const CustomLeftArrow = () => {
-  return <div className='arrow left'>left</div>
-}
-
-const CustomRightArrow = () => {
-  return <div className='arrow right'>right</div>
 }
