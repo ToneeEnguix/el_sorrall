@@ -1,14 +1,15 @@
 import { useCallback, useEffect, useState } from 'react'
 import { useRecoilValue } from 'recoil'
 import facepaint from 'facepaint'
-import { keyframes } from '@emotion/react'
+// import { keyframes } from '@emotion/react'
 
 import LanguageSelector from './LanguageSelector'
 import { languageAtom, textAtom } from '../../state/atoms'
 import Button from '../general/Button'
 
-import burger from '../../assets/imgs/burger.webp'
-import burgerOpen from '../../assets/imgs/burger_open.webp'
+// import burger from '../../assets/imgs/burger.webp'
+// import burgerOpen from '../../assets/imgs/burger_open.webp'
+import burgerDoble from '../../assets/imgs/burger_doble.webp'
 import LanguageSelectorMobile from './LanguageSelectorMobile'
 import mobileMenuWave from '../../assets/imgs/mobile-menu-wave.webp'
 
@@ -52,6 +53,18 @@ export default function Navbar({ ref1, ref2, ref3 }) {
     }
   }, [escFunction])
 
+  const burgerStyle = {
+    position: 'absolute',
+    top: 60,
+    right: 50,
+    height: 'auto',
+    width: '50px',
+    filter: isMenuOpen ? 'brightness(0) invert(1)' : '',
+    // transition: 'all 200ms linear',
+    '-webkit-transform': isMenuOpen ? 'scaleX(-1)' : '',
+    transform: isMenuOpen ? 'scaleX(-1)' : '',
+  }
+
   return (
     <div css={navbarStyle}>
       <div className='left bold'>
@@ -66,6 +79,12 @@ export default function Navbar({ ref1, ref2, ref3 }) {
       <div className='mobile'>
         <div className='flexCenter pointer'>
           <img
+            src={burgerDoble}
+            alt='burger'
+            onClick={toggleMenu}
+            css={burgerStyle}
+          />
+          {/* <img
             className='open'
             src={burgerOpen}
             alt='menu burger open'
@@ -78,15 +97,15 @@ export default function Navbar({ ref1, ref2, ref3 }) {
             alt='menu burger'
             onClick={toggleMenu}
             style={{ opacity: isMenuOpen ? 0 : 1, zIndex: 1 }}
-          />
+          /> */}
         </div>
-        {isMenuOpen && (
-          <>
-            <MobileMenu lang={lang} text={text} />
-            <div css={click_outside} onClick={() => setOpenMenu(false)} />
-          </>
-        )}
       </div>
+      {isMenuOpen && (
+        <>
+          <MobileMenu lang={lang} text={text} />
+          <div css={click_outside} onClick={() => setOpenMenu(false)} />
+        </>
+      )}
     </div>
   )
 }
@@ -125,19 +144,8 @@ const navbarStyle = mq({
   },
   '.mobile': {
     display: ['block', 'none'],
-    position: 'fixed',
     left: '50%',
     right: '50%',
-    '.open, .closed': {
-      height: 'auto',
-      width: '26px',
-      // webkitTransition: 'opacity 500ms ease-in-out',
-      // mozTransition: 'opacity 500ms ease-in-out',
-      // oTransition: 'opacity 500ms ease-in-out',
-      // transition: 'opacity 500ms ease-in-out',
-      position: 'absolute',
-      top: 16,
-    },
   },
 })
 
@@ -176,14 +184,13 @@ const MobileMenu = ({ lang, text }) => {
 const mobileMenuStyle = {
   // animation: `${fadeIn} 1s ease;`,
   position: 'fixed',
-  top: 72,
+  top: 90,
   margin: '0 auto',
-  left: 0,
-  right: 0,
+  right: 50,
   width: '50vw',
   minWidth: '240px',
   backgroundColor: '#FCFBF8E5',
-  borderRadius: '0 0 32px 32px',
+  borderRadius: '32px',
   padding: '40px',
   color: '#000D80',
   fontWeight: 600,
@@ -199,6 +206,6 @@ const click_outside = {
   left: 0,
   width: '100vw',
   height: '100vh',
-  // backgroundColor: 'black',
+  backgroundColor: '#00000054',
   zIndex: -1,
 }

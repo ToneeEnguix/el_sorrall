@@ -106,7 +106,13 @@ const MobileCarousel = ({ lang, text }) => {
 
   return (
     <div css={mobileCarouselStyle} className='tablet'>
-      <Carousel responsive={responsive} infinite={true} centerMode={true}>
+      <Carousel
+        responsive={responsive}
+        infinite={true}
+        centerMode={true}
+        customRightArrow={<CustomRightArrow />}
+        customLeftArrow={<CustomLeftArrow />}
+      >
         <div>
           <img alt={text[lang].blanes.img1alt} src={img1} />
         </div>
@@ -132,4 +138,21 @@ const mobileCarouselStyle = {
     height: '418px',
     objectFit: 'cover',
   },
+  '.arrow': {
+    position: 'absolute',
+  },
+  '.left': {
+    left: 100,
+  },
+  '.right': {
+    right: 100,
+  },
+}
+
+const CustomLeftArrow = () => {
+  return <div className='arrow left'>left</div>
+}
+
+const CustomRightArrow = () => {
+  return <div className='arrow right'>right</div>
 }

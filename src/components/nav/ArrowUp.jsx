@@ -3,8 +3,7 @@ import { keyframes } from '@emotion/react'
 import { animateScroll } from 'react-scroll'
 import facepaint from 'facepaint'
 
-import arrowUp from '../../assets/imgs/arrow_up.webp'
-import arrowUpClicked from '../../assets/imgs/arrow_up_clicked.webp'
+import arrowUp from '../../assets/imgs/arrow_up_clicked.webp'
 
 // RESPONSIVENESS SETTINGS
 const breakpoints = [800, 1000]
@@ -37,8 +36,7 @@ export default function ArrowUp() {
   if (isVisible) {
     return (
       <div css={scrollUpStyle} onClick={scrollUp} className='pointer'>
-        <img className='fixed' alt='scroll up' src={arrowUp} />
-        <img className='clicked' alt='scroll up' src={arrowUpClicked} />
+        <img className='clicked' alt='scroll up' src={arrowUp} />
       </div>
     )
   } else return null
@@ -55,7 +53,7 @@ const fadeIn = keyframes`
 
 const scrollUpStyle = mq({
   animation: `${fadeIn} 1s ease;`,
-  backgroundColor: '#000D80',
+  backgroundColor: '#FCFBF8',
   borderRadius: '100px',
   width: '50px',
   height: '50px',
@@ -66,23 +64,21 @@ const scrollUpStyle = mq({
   alignItems: 'center',
   justifyContent: 'center',
   transition: 'all 200ms linear',
-  border: '1px solid #000D80',
+  border: '1px solid transparent',
   zIndex: 2,
   ':hover': {
-    backgroundColor: '#FDF8E7',
+    backgroundColor: '#5299FF',
+    img: {
+      filter: 'brightness(0) invert(1)',
+    },
+  },
+  ':active': {
     border: '1px solid #000D80',
-    '.fixed': {
-      display: 'none',
-    },
-    '.clicked': {
-      display: 'block',
-    },
+    backgroundColor: '#FCFBF8',
+    img: { filter: 'none' },
   },
   img: {
-    height: '25px',
-    width: 'auto',
-  },
-  '.clicked': {
-    display: 'none',
+    height: '35px',
+    width: '20px',
   },
 })

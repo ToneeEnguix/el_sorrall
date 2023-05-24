@@ -19,9 +19,9 @@ const buttonStyle = {
   border: 'none',
   padding: '0 2.5rem',
   height: '48px',
-  // transition: 'all 200ms linear',
   marginLeft: '1.75rem',
   letterSpacing: '1px',
+  border: '1px solid transparent',
   ':hover': {
     background: '#5299FF',
   },
@@ -29,5 +29,6 @@ const buttonStyle = {
     transition: 'all 200ms linear',
     background: '#FCFBF8',
     color: '#00204D',
+    border: '1px solid #5299FF',
   },
 }

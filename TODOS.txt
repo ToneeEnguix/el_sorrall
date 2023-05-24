@@ -1,6 +1,4 @@
 DOING:
-- button gradient => falta HOVER
-- mobile menu
 
 TODOS:
 - carousel items selector/indicator
@@ -9,6 +7,8 @@ TODOS:
 
 
 DONE:
+- mobile menu
+- button gradient
 - boton llamada en movil
 - new navbar
 - change dish image

@@ -32,9 +32,17 @@ export default function LanguageSelectorMobile() {
 }
 
 const selectorStyle = {
-  // span: {
-  // color: '#000D80',
-  // },
+  p: {
+    transition: 'all 200ms linear',
+    width: 'fit-content',
+    margin: '0 auto 1.25rem',
+  },
+  '.active': {
+    backgroundColor: '#000D80',
+    borderRadius: '24px',
+    padding: '3px 8px',
+    color: '#FDF8E7',
+  },
 }
 
 const languages = {
