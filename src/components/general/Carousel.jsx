@@ -37,7 +37,7 @@ export default function CustomCarousel({ children }) {
         customLeftArrow={<CustomLeftArrow />}
         customButtonGroup={<ButtonGroup length={children.length} />}
         //
-        autoPlay={true}
+        // autoPlay={true}
         additionalTransfrom={0}
         arrows
         autoPlaySpeed={3000}
@@ -74,12 +74,12 @@ const mobileCarouselStyle = mq({
     position: 'absolute',
     backgroundColor: '#FCFBF8',
     borderRadius: '100px',
-    width: ['40px', '55px'],
-    height: ['40px', '55px'],
+    width: ['40px', '40px', '55px'],
+    height: ['40px', '40px', '55px'],
     transition: 'all 200ms linear',
     border: '1px solid transparent',
     img: {
-      width: ['10px', '18px'],
+      width: ['10px', '10px', '18px'],
       height: 'auto',
     },
     ':hover': {
@@ -131,9 +131,11 @@ const ButtonGroup = ({ length, next, previous, goToSlide, ...rest }) => {
   const totalItems = [...Array(length).keys()]
 
   const actualCurrentSlide =
-    currentSlide > totalItems.length - 1
-      ? currentSlide - totalItems.length
-      : currentSlide
+    Math.floor(currentSlide) > totalItems.length - 1
+      ? Math.floor(currentSlide) - totalItems.length
+      : Math.floor(currentSlide)
+
+  console.log({ currentSlide, actualCurrentSlide })
 
   return (
     <div css={btnGroupStyle}>

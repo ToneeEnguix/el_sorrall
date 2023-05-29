@@ -102,6 +102,6 @@ const MobileCarousel = ({ lang, text }) => {
 
 const mobileCarouselStyle = mq({
   '.imgContainer': {
-    padding: ['0 15px', '0 25px'],
+    padding: ['0 15px', '0 0 0 25px'],
   },
 })
