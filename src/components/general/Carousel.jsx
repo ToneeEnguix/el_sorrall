@@ -37,7 +37,7 @@ export default function CustomCarousel({ children }) {
         customLeftArrow={<CustomLeftArrow />}
         customButtonGroup={<ButtonGroup length={children.length} />}
         //
-        // autoPlay={true}
+        autoPlay={true}
         additionalTransfrom={0}
         arrows
         autoPlaySpeed={3000}
