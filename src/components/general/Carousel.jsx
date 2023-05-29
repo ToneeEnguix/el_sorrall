@@ -142,10 +142,7 @@ const ButtonGroup = ({ length, next, previous, goToSlide, ...rest }) => {
           <div
             className={`dot ${actualCurrentSlide === x ? 'active' : ''}`}
             key={x}
-            onClick={() => {
-              console.log('presssed: ', x)
-              goToSlide(x)
-            }}
+            onClick={() => goToSlide(x)}
           />
         )
       })}
