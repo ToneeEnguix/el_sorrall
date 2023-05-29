@@ -135,8 +135,6 @@ const ButtonGroup = ({ length, next, previous, goToSlide, ...rest }) => {
       ? Math.floor(currentSlide) - totalItems.length
       : Math.floor(currentSlide)
 
-  console.log({ currentSlide, actualCurrentSlide })
-
   return (
     <div css={btnGroupStyle}>
       {totalItems.map((x) => {
