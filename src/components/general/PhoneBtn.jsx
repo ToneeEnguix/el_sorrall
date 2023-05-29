@@ -18,11 +18,11 @@ const phoneBtnStyle = mq({
   background:
     'linear-gradient(53.3deg, rgba(62, 69, 255, 0.5) 25.42%, rgba(0, 167, 204, 0.47) 74.44%), linear-gradient(193.13deg, #0063F7 45.13%, #88FFC6 86.41%)',
   borderRadius: '100px',
-  width: '50px',
-  height: '50px',
+  width: '70px',
+  height: '70px',
   position: 'fixed',
-  bottom: [170, 140, 80],
-  right: 80,
+  bottom: [60, 80],
+  right: 60,
   display: ['flex', 'none'],
   alignItems: 'center',
   justifyContent: 'center',
@@ -31,7 +31,7 @@ const phoneBtnStyle = mq({
   border: '1px solid transparent',
   img: {
     transition: 'all 200ms linear',
-    width: '25px',
+    width: '30px',
     filter: 'brightness(0) invert(1)',
   },
   ':hover': {

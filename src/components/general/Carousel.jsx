@@ -30,6 +30,7 @@ export default function CustomCarousel({ children }) {
         centerMode={true}
         customRightArrow={<CustomRightArrow />}
         customLeftArrow={<CustomLeftArrow />}
+        customButtonGroup={<ButtonGroup />}
       >
         {children}
       </Carousel>
@@ -49,6 +50,29 @@ const CustomRightArrow = ({ onClick }) => {
   return (
     <div className='pointer arrow right flexCenter' onClick={onClick}>
       <img src={arrow} alt='arrow' />
+    </div>
+  )
+}
+
+const ButtonGroup = ({ next, previous, goToSlide, ...rest }) => {
+  const {
+    carouselState: { currentSlide },
+  } = rest
+  return (
+    <div className='carousel-button-group'>
+      {' '}
+      {/* remember to give it position:absolute */}
+      <button
+        className={currentSlide === 0 ? 'disable' : ''}
+        onClick={() => previous()}
+      >
+        PREVIOUS
+      </button>
+      <button onClick={() => next()}>NEXT</button>
+      <button onClick={() => goToSlide(currentSlide + 1)}>
+        {' '}
+        Go to any slide{' '}
+      </button>
     </div>
   )
 }

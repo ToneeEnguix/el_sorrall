@@ -1,7 +1,7 @@
 DOING:
+- carousel items indicator
 
 TODOS:
-- carousel items selector/indicator
 - carta
 - image optimization
 
