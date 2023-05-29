@@ -56,7 +56,7 @@ export default function Navbar({ ref1, ref2, ref3 }) {
   const burgerStyle = {
     position: 'absolute',
     top: 60,
-    right: 50,
+    right: 30,
     height: 'auto',
     width: '50px',
     filter: isMenuOpen ? 'brightness(0) invert(1)' : '',

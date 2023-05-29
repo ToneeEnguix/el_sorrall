@@ -41,7 +41,7 @@ const blanesStyle = mq({
     top: '-7vw',
   },
   p: {
-    width: ['70%', '70%', '51%'],
+    width: ['calc(100% - 80px)', '70%', '51%'],
     margin: '0 auto 48px',
   },
   '.desktop': {
@@ -100,8 +100,8 @@ const MobileCarousel = ({ lang, text }) => {
   )
 }
 
-const mobileCarouselStyle = {
+const mobileCarouselStyle = mq({
   '.imgContainer': {
-    padding: '0 0 0 25px',
+    padding: ['0 15px', '0 25px'],
   },
-}
+})

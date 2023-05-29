@@ -69,6 +69,12 @@ h4 {
   /* margin: 0 0 32px; */
   letter-spacing: 2px;
 }
+p {
+  font-weight: 400;
+  font-size: 16px;
+  color: #292823;
+  line-height: 1.5em;
+}
 .body {
   font-weight: 400;
   font-size: 16px;
@@ -153,5 +159,8 @@ button {
   }
   h3 {
     font-size: 40px;
+  }
+  .body {
+    text-align: left;
   }
 }

@@ -1,12 +1,12 @@
 DOING:
-- carousel items indicator
 
 TODOS:
-- carta
 - image optimization
 
 
 DONE:
+- carta
+- carousel items indicator
 - mobile menu
 - button gradient
 - boton llamada en movil

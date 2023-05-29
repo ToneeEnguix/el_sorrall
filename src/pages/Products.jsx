@@ -3,11 +3,12 @@ import facepaint from 'facepaint'
 import { useRecoilValue } from 'recoil'
 
 import Button from '../components/general/Button'
+import { languageAtom, textAtom } from '../state/atoms'
 
 import img1 from '../assets/imgs/products_1.webp'
 import img2 from '../assets/imgs/products_2.webp'
 import img3 from '../assets/imgs/products_3.webp'
-import { languageAtom, textAtom } from '../state/atoms'
+import carta from '../assets/carta.pdf'
 
 // RESPONSIVENESS SETTINGS
 const breakpoints = [800, 1000]
@@ -30,10 +31,16 @@ export default function Products({ linkRef }) {
         <b>{text[lang].products.subtitle4}</b>
       </p>
       <Grid />
-      <Button className='btnWrapper' onClick={() => setShowModal(true)}>
-        {text[lang].products.button}
+      <Button
+        className='btnWrapper'
+        // onClick={() => setShowModal(true)}
+        onClick={() => setShowModal(true)}
+      >
+        <a href={carta} target='_blank' rel='noopener noreferrer'>
+          {text[lang].products.button}
+        </a>
       </Button>
-      {isModalOpen && <Modal setShowModal={setShowModal} />}
+      {/* {isModalOpen && <Modal setShowModal={setShowModal} />} */}
     </div>
   )
 }
@@ -54,6 +61,9 @@ const productsStyle = mq({
   },
   '.btnWrapper': {
     marginTop: [0, '78px'],
+    a: {
+      textDecoration: 'none',
+    },
   },
 })
 
@@ -66,17 +76,17 @@ const Grid = () => {
       <div>
         <img alt={text[lang].products.img1alt} src={img1} />
         <p className='bold'>{text[lang].products.dish1}</p>
-        <p className='body'>{text[lang].products.description1}</p>
+        <p>{text[lang].products.description1}</p>
       </div>
       <div>
         <img alt={text[lang].products.img2alt} src={img2} />
         <p className='bold'>{text[lang].products.dish2}</p>
-        <p className='body'>{text[lang].products.description2}</p>
+        <p>{text[lang].products.description2}</p>
       </div>
       <div>
         <img alt={text[lang].products.img3alt} src={img3} />
         <p className='bold'>{text[lang].products.dish3}</p>
-        <p className='body'>{text[lang].products.description3}</p>
+        <p>{text[lang].products.description3}</p>
       </div>
     </div>
   )

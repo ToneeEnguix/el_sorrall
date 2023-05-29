@@ -71,8 +71,8 @@ const footerStyle = mq({
   justifyItems: 'center',
   padding: '60px 50px 75px',
   justifyItems: ['center', 'left'],
-  textAlign: ['center', 'left', 'left'],
   p: {
+    textAlign: ['center', 'left', 'left'],
     color: '#fdf8e7',
     fontSize: '15px',
     lineHeight: '1.8rem',
