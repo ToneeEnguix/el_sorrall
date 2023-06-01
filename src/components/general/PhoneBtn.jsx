@@ -26,7 +26,6 @@ const phoneBtnStyle = mq({
   display: ['flex', 'none'],
   alignItems: 'center',
   justifyContent: 'center',
-  zIndex: 2,
   transition: 'all 200ms linear',
   border: '1px solid transparent',
   zIndex: 5,
